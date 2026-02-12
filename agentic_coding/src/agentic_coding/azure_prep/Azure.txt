@@ -1,0 +1,3480 @@
+Core services like computing ,networking, storage, and databases.
+
+Azure fundamentals:Cloud architecture and azure
+==Study 1 to 2 hours a day==
+
+In Person Vue (Proctored exam system)
+700/1000 around 70% to pass (afford to get wrong 10 - 14 questions)
+
+Skills measured 
+Cloud concepts (25 - 30%)
+    -13 to 15 quesions
+
+Azure arquitecture and services (35 - 40%)
+    -16 to 18 questions
+
+Azure management and governance (30 - 35%)
+    -14 to 16 questions
+
+35 to 50 questions
+
+Questions format 
+-Multiple choice
+-Multiple answer
+-Drag and drop
+-Yes and No
+
+|===Exam AZ-900===|
+
+1.Cloud concepts
+===What is cloud computing?===
+Using a network in a remote server that is hosted on the internet, so that you can store, 
+manage, and procees data ,rather than a local server or PC (someone else does the server job)
+-someone owns the server
+-someone hires the IT people
+-someone pays or rents real-estate
+-You configure your cloud services and code, someone else does the rest
+
+=Evolution of cloud hosting=
+1995 - Dedicated server
+One Physical machine dedicated to single a business
+-runs a single web-app/site
+(Very expensive, high maintenance, *High security)
+
+Virtual Private server (VPS)
+One Physical machine dedicated to a single business (virtualized into submachines)
+-Runs multiple web-apps/sites
+(Better utilization and Isolation of resources)
+
+Shared Hosting (GoDaddy)
+One Physical machine, shared by hundred of business 
+-Relies on most tenants under-utlizing their resources
+(Very Cheap, limited functionality , Poor isolation)
+
+Cloud hosting
+Multiple physical machines (act as one system)
+-Abstracted into multiple cloud services
+(Flexible, Scalable, Secure, Cost-effective, High configurability)
+
+
+==Common cloud Services==
+A cloud provider can have hundreds of cloud services 
+(grouped into types of services)
+
+=Four most common types of cloud services for InfrastructureAsAService(IaaS)=
+
+-Compute
+Virtual Computer that can run application, programs and code
+
+-Storage
+Virtual hard-drive that can store files
+
+-Networking
+Virtual network being able to define internet connections or Network isolations
+
+-Databases
+Virtual database for storing reporting data or a database for general purpose web-application
+
+
+==What is Microsoft?==
+American multinational computer technology corporation (headquartered in Redmond, Washington)
+-Makes sofware , phones, tablets, game consoles, CLOUD SERVICES, search engine
+-Around since late 1970s (well known for operating system Windows)
+
+==What is Azure==
+Cloud provider service for Microsoft (CSPs = Cloud Service Provider)
+Azure means "Bright blue color of the cloudless sky"
+
+==Benefits of Cloud Computing==
+-Cost effective
+    You pay what you consume (no up-front cost), Pay-as-you-go(PAYG)
+    thousands of customers sharing the cost of the resources
+
+-Global
+    Launch workloads anywhere in the world, just choose region
+
+-Secure
+    Cloud provider takes care of physical security.
+    Can be secure by default or you can configure access down to granular level
+
+-Reliable 
+    Data backup, disaster recovery, data replication, fault tolerance
+
+-Scalable 
+    Increase or decrease recources and services based on demand
+
+-Elastic
+    Automate scaling during spikes and drop in demand
+
+-Current 
+    Hardware and managed sofware is patched ,upgraded and replaced by cloud provider 
+    (without interruptions, or few interruptions)
+
+
+==Types of cloud computing==
+Software As A Service (SaaS)
+    - Product that is run and managed by the service Provider
+    (Don't need to worry about how the service is maintained, just remains available)
+    -SalesForce, Gmail, Office 365
+
+Platform As A Service (PaaS)
+    - Focus on deployment and management of your apps
+    (Don't worry about provisioning, configuring or understanding hardware or OS)
+    - AWS Elastic Beanstalk, heroku, google app (engine)
+
+Infrastructure As A Service (IaaS)
+    -The basic building blocks for cloud IT
+    (Don't worry about IT staff, data centers and data storage space)
+    -Provides access to networking features, computers, and data storage space
+    -Microsoft Azure, AWS, Oracle Cloud
+
+==Types of Cloud Computing Responsibilities==
+On-Premise      | IaaS              | PaaS              | SaaS
+                |                   |                   |
+Application     |                   |                   | Application 
+Data            |                   |                   | Data     
+Runtime         |                   |  Runtime          | Runtime   
+Middleware      |                   |  Middleware       | Middleware 
+OS              |                   |     OS            |   OS       
+Virtualization  |  Virtualization   |   Virtualization  | Virtualization
+Servers         |   Servers         |   Servers         |  Servers   
+Storage         |   Storage         |   Storage         |  Storage 
+Networking      |   Networking      |   Networking      |  Networking  
+         
+Blank space = Customer is Responsible
+With name = CSP is Responsible
+
+
+==Cloud Deployment Models==
+Public Cloud
+    -Everything built on the Cloud Provider (Cloud-Native)
+
+Private Cloud
+    -Everything built on company's datacenters (On-Premise)
+    The cloud could be OpenStack
+
+Hybrid
+    -Using both (On-Premise and Cloud Service Provider)
+    -It connects both through a Express Route (like fiber optic)
+
+
+=Pros And Cons Deployment Models=
+Public Cloud
+    -Cost: Most cost-effective
+    -Security: Security Controls by Default, Might not meet security requirements
+    -Level of configuration: Limited based on what the CSP exposes to you
+    -Technical Knowledge: You don't need depth knowledge of infrastructure
+
+
+Private Cloud
+    -Cost: Most expensive
+    -Security: Can meet any security compliance if done well, No guarantee is secure
+    -Level of configuration: You can configure it the way you like
+    -Technical Knowledge: Need to know in-depth how to configure all levels
+
+Hybrid cloud
+    -Cost: Could be more cost-effective based on what you offload to the cloud
+    -Security:  can meet all requirements, can meet all requirements you have to secure the connection to the cloud
+    -Level of configuration: You get the best of both worlds
+    -Technical Knowledge: You need to know in-depth how to configre all levels of the infrastructure and know the CSP services
+
+
+=Extra Deployment Model=
+-Cross cloud
+    Multiple Cloud Providers (multi-cloud, hybrid-cloud)
+    Amazon <-> Azure Arc(CSP) <-> GCP Kubernetes Engine
+
+
+==Total cost of ownership (TCO)==
+-CAPEX (On-premise)
+    -Top of iceberg                  /\
+        Software license fees       /  \
+-----------------------------------------------------------------
+    -Bottom of iceberg
+        Implementation              \  /
+        Configuration                \/
+        Training
+        Physical Security
+        Hardware
+        IT personal 
+        Maintenance
+
+-OPEX (75% Savings compared to CAPEX)
+    -Top of iceberg              /\
+        Subscription fees       /  \
+------------------------------------------------------------------
+    -Bottom of iceberg
+        Implementation          \  /
+        Configuration            \/
+        Training
+
+
+==Capital vs Operational Expenditure==
+
+-Capital expenditure (CAPEX)
+    Spending money upfront on physical infrastructure(Guess upfront money you plan to spend)
+    (Deducting that expense from your tax bill over time)
+
+    -Server costs(computers)
+    -Storage costs(hard drives)
+    -Network costs(Routers, Cables, Switches)
+    -Backup and archive costs
+    -Disaster recovery costs
+    -Datacenter costs (Rent, Cooling, Physical security)
+    -Technical personal
+
+
+-Operational expenditure (OPEX)
+    The costs associated with an on-premises datacenter shifted to the cost of CSP.
+    (Customer only concerned with non-physical costs)
+    Try product or service without investing in equipment
+
+    -Leasing Software and Customizing features
+    -Training Employees in Cloud services 
+    -Paying for Cloud support
+    -Billing based on cloud metrics
+        Compute usage
+        Storage usage
+
+
+==Cloud architecture Terminologies==
+Solutions architect
+    -A role in a techical organization which architects a solution 
+    using mutiple systems via RESEARCHING, DOCUMENTATION, EXPERIMENTATION
+
+Cloud architect
+    -A solutions architect focused solely on architecting solutions using cloud services
+
+    =Cloud architect terms=
+        -Availability
+            Ensure services remains available (HA=Highly Available)
+
+        -Scalability
+            Ability to grow rapidly
+
+        -Elasticity
+            Ability to shrink and grow to meed demand
+
+        -Fault tolerance
+            Ability to prevent a failure
+
+        -Disaster recovery
+            Ability to recover from a failure (DR=Highly Durable)
+
+
+==High availablity==
+    Ability  for your service to remain available by ensuring there is
+    NO SINGLE POINT OF FAILURE and/or ensure certain level of performance
+
+
+    =AZURE LOAD BALANCER (Green arrows)=
+        Allows you to evenly distribute traffic to multiple Servers
+       
+        If datacenter becomes unavailable (unhealthy) the load balacer will Route
+        traffic to only available datacenters with servers
+
+
+==High scalability==
+    Ability to increase capacity based on the increasing demand of 
+    TRAFFIC, MEMORY and COMPUTING POWER
+
+    =Vertical scaling (Scaling up)
+        Upgrade to a bigger server 
+
+    =Horizontal Scsling (Scaling out)
+        Add more servers of the same size
+
+
+==High elasticity==
+    Ability to increase or DECREASE your capacity based on the CURRENT  
+    demand of TRAFFIC, MEMORY and COMPUTER POWER 
+
+    =Horizontal scaling
+        -Scaling out = add more servers of the same size
+        -Scaling in = removing more servers of the same size
+
+    Vertical scaling is hard for traditional architecture 
+    (Usually use horizontal scaling described with elasticity)
+        
+
+    -AZURE VM SCALE SETS (Azure service)
+        Automatically increase or decrease in response to demand or 
+        defined schedule
+
+    -SQL SERVER STRETCH DATABASE
+        Dinamically stretch warm and cold transactional data from Microsoft 
+        SQL Server 2016 to Microsoft Azure
+
+
+==Fault tolerance==
+    Ability for the service to ensure there is no SINGLE POINT OF FAILURE (Preventing failure)
+
+    -Fail-over
+        You have a plan to shift traffic to a redundant system in case the primary system fails 
+       
+        FOR EXAMPLE:
+        Having a copy(secondary) of the database where the changes are synced,
+        it is ONLY USED when the primary database fails (The copy becomes the primary database)
+
+    -AZURE TRAFFIC MANAGER
+        DNS-based traffic balancer:
+            From -> failing primary system 
+            To -> stand-by secondary system
+
+==High Durability==
+    Ability to recover from a disaster and prevent LOSS OF DATA 
+    Disaster Recovery: Solution to recover from a disaster 
+
+    QUESTION TO ASK TO EVALUATE THIS:
+        -Do you have a backup?
+        -How fast can you restore that backup?
+        -Does the backup still work?
+        -How do you ensure current live data is not corrupt?
+
+
+==Business Continuity Plan (BCP)==
+Document that outlines how a business will continue operating 
+DURING AN UNPLANNED DISRUPTION IN SERVICES
+
+Recovery Point Objective (RPO)
+    - maximum acceptable amount of data loss after incident
+    (Expressed as an amount of time)
+    (How much data are you willing to lose?)
+
+Recovery Time Objective(RTO)
+    - maximum amount of downtime the business can tolerate without having 
+    financial loss 
+    (How much time are you willing to do down?)
+
+==Disaster Recovery Options==
+
+Low <-----------------------------------------------------------------> High
+<--Backup and restore --- Pilot Light ----Warm Standby --- Multi-site Active/active 
+
+Backup and restore 
+    -Backup date and restore it in new infrastructure 
+    (Hours)
+        -Lower priority
+        -Restore data after event 
+        -Deploy resources after event 
+        -Cost $
+
+Pilot Light
+    -Data is replicated to another region with minimal services running
+    (10 minutes)
+        -Less stringent RTO & RPO
+        -Core services 
+        -Start & scale resources after event
+        -Cost $$
+
+Warm standby 
+    -Scaled down copy of infrastructure running (ready to scale up)
+    (Minutes)
+        -Business critical services
+        -Scale resources after event 
+        -Cost $$$
+
+Multi-site Active/active
+    -Scaled up copy of your infrastructure in another region
+    (Real time)
+        -Zero downtime
+        -Near zero loss
+        -Mission critical services 
+        -Cost $$$$ (Basically the cost of the whole infrastructure)
+
+
+2.Evolution of Compute
+==Dedicated Services==
+    -physical server WHOLLY UTILIZED BY A SINGLE CUSTOMER 
+        -Guess the capacity, overpay for unitilized server 
+        -Upgrading beyond capacity will be slow and expensive
+        -Limited by the Operating System (OS)
+        -Multiple apps can result in conflicts (resource sharing)
+        -Guarantee of security, privacy and full utility of underlying resources 
+
+
+==Virtual Machines (VMs)==
+    -Run multiple virtual machines on one machine 
+        -Hypervisor (software layer that lets you the VMs)
+        -physical server shared  by multiple customers 
+        -Pay fraction of server 
+        -Overpay for inutilized Virtual machine 
+        -Limited by Guest operating system 
+        -Multiple apps on a single Virtual machine can result in conflics(resource sharing)
+   
+==Containers==
+    -Virtual machines running multiple containers 
+    -Docker Deamon(name of software layer that lets you run multiple containers)
+    -Maximum the utilize of the available capacity (more cost-effective)
+    -Containers share the same OS (more efficient than multiple VMs)
+    -Mutltiple apps run side by side without being limited to the same OS
+    -NO CONFLICTS (Resource sharing)
+
+==Functions==
+    -Managed VMs running managed containers 
+    -Known as SERVERLESS COMPUTE 
+    -Upload piece of code, choose amount of memory and duration
+    -You are Responsible for ONLY code and data 
+    -Very cost effective (only pay for the time code is running)
+        -VMs only run when there is code in it 
+        -Cold Starts is a side-effect of this setup 
+
+
+3.Global infrastructure
+==Regions and Geographies==
+
+Region
+    -Grouping of multiple datacenters (Availability zones)
+
+    --Azure has 58 regions available across 140 countries--
+
+Geography
+    -discreet market of two or more regions that preserves
+    DATA RESIDENCY and COMPLIANCE BOUNDARIES
+
+=Azure geographies=
+    -United states
+    -Azure Government(US)
+    -Canada
+    -Brazil
+    -Mexico
+    
+==Paired Regions==
+-Each Region is paired with another region 300 MILES AWAY
+-One region updated at a time(ENSURE NO OUTAGES)
+-Some AZURE services rely on Paired regions for DISASTER RECOVERY 
+
+AZURE GEO-REDUNDANT STORAGE (GRS)
+    -Replicates data to a secondary region Automatically
+    (ensuring data is durable even when primary region isn't recoverable)
+
+
+==Region Types and Service Availability==
+(Not all Cloud services available in every Region)
+
+Recommended Region
+    -Region that provides broadest range of service capabilities
+    DESIGNED TO SUPPORT AVAILABILITY ZONES now or in the future
+
+Alternate (other) Region 
+    -Region that extends Azure's footprints within a data residency boundary
+    (Not designed to support AZ's=Availability Zones) 
+    They are labeled as OTHER in the Azure Portal
+
+=General Availability (GA)=
+    -Service considered ready to be used publicly by everyone
+
+Azure Cloud services are grouped into three categories:
+(Category determines when cloud services become available)
+
+    -Foundational
+        When GA, immediately or in 12 months (Recommended or Alternate Region)
+
+    -Mainstream
+        When GA, immediately or in 12 months (Recommended)
+        (May become available in Alternate Regions -> based in customer demand)
+
+    -Specialized
+        Available in Recommended or Alternate regions based in customer demand 
+
+==Special regions==
+    To meet compliance or legal reasons 
+    
+    United States
+        -US DoD Central
+        -US Gov Virginia
+        -US Gov Iowa 
+        (Three more secret locations UNDISCLOSED)
+
+    China
+        -China East
+        -China North 
+        (Available throgh Microsoft(Does not maintain those servers) and 21Vianet)
+
+==Availability Zones (AZ)==
+    Physical location made up of one or more datacenter
+
+    Datacenter(Secured building that contains hundred of thousands of computers)
+    
+    A region will generally contain 3 AVAILABILITY ZONES
+    (Isolated from each other (different buildings) but close enough for low latency)
+
+    =High availability=
+    Run workloads in 3 AZs to ensure services remain available(in case one of them fails)
+    
+
+==AZs supported Regions==
+    Not every region has support for AZs(ALTERNATE OR OTHER)
+    Recommended regions are suppose to have at least 3 AZs 
+
+    -Minimum of 3 AZS-
+        Central US
+        East US 2
+        West US 2
+        West Europe
+        France Central 
+        North Europe 
+        Southeast Asia 
+
+==Availability Sets Fault and update domains==
+    AZs in an Azure Region 
+    -Combination of FAULT DOMAIN and UPDATE DOMAIN 
+
+    -Fault Domain 
+        Logical grouping of hardware to avoid single point of failure within an AZ 
+        VMs grouped that share common power source and network switch 
+
+    -Update Domain 
+        Azure may need to apply udpated to hardware and software 
+        Ensure your resources do not go offline 
+
+    -Availability set 
+        Logical grouping to ensure that VMs you place in the availabiliy set
+        are different fault/update domains to avoid downtime
+
+4. Compute services
+==Computing services==
+
+    AZURE VIRTUAL MACHINES 
+        -Windows or Linux virtual machines (VMs)
+            Choose OS, Memory, CPU, Storage (Share hardware with customers)
+
+    AZURE CONTAINER INSTANCES 
+        -DOCKER AS A SERVICE-
+        Run containerized apps on Azure without provisioning servers of VMs
+
+    AZURE KUBERNETES SERVICE (AKS)
+        -KUBERNETES AS A SERVICE.
+            Easy to deploy, manage and scale containerized applications
+            (Uses the open source Kubernetes (K8) software) 
+
+    AZURE SERVICE FABRIC 
+        -TIER-1 ENTERPRISE CONTAINERS AS A SERVICE
+            (Distributed systems platform. Runs in Azure or On-Premises)
+            Easy to package, deploy, and manage scalable and reliable MICROSERVICES 
+
+    AZURE FUNCTIONS 
+        - Event-driven, serverless compute(functions) run code without 
+        provisioning or managing servers.
+        You pay only for the compute time you consume 
+
+    AZURE BATCH
+        -Plans,schedules and executres your batch computer workloads accross running 100+ jobs in parallel.
+        Use SPOT VMs to save money(previously used Low-priority VMs to save on compute)
+
+
+==AZURE VIRTUAL MACHINES==
+    -Highly configurable server.
+    Virtualization (run a server WITHOUT HAVING TO BUY AND MAINTAIN PHYSICAL HARDWARE )
+
+    -Virtual machines maintenance 
+        Applying OS system patches 
+        Installing and configuring packages 
+
+    -Things to know
+        -The size of the virtual machine is determined by the IMAGE 
+            Image(combination of vCPU's, Memory, and Storage capacity)
+
+        -Current limit on a per Subscription is 20 VMs per region 
+        (VMs billed at an hourly rate)
+
+        -A Single instance VMs has availability of 99.9% (when premium storage disks)
+
+        -Two instances deployed in Availability set gives you 99.95% availability 
+        
+        -Attach multiple Managed disk to AZURE VMs 
+
+    =Components created or associated to VIRTUAL MACHINE when launched=
+        -NETWORK SECURITY GROUP (NSG) -> attached to NIC
+            Virtual firewall with rules around ports and protocols
+
+        -NETWORK INTERFACE (NIC) 
+            Device that handles IP protocols and network communication
+
+        -VIRTUAL MACHINE INSTANCE
+            The actual running server 
+
+        Public IP address -> address accesed publicly to the VM
+
+        -Virtual Network(VNet)
+            Network where the VM resides
+
+==Operating systems==
+    -The OS is a program that manages other programs in the computer 
+    (Windows, macOS, Linux)
+
+    Choose an image to specify which OS you are going to use 
+
+    Microsoft works with partners to ensure images are updated and optimized for an AZURE runtime 
+    (Images found in the AZURE Markeplace)
+
+    =Partners=
+        -SUSE Linux Enterprise server 
+        -Red Hat Enterprise Linux 
+        -Ubuntu Server 
+        -Debian
+        -FreeBSD
+        -Azure Marketplace (Flatcar Container Linux)
+        -RancherOS
+        -Bitnami Library for Azure 
+        -Mesosphere DC/OS on Azure 
+        -Docker Images 
+        -CloudBees Jenkins Platform 
+
+    =BRING OWN LINUX=
+        By creating Linux Virtual Hard Disk (VHD)
+
+==AZURE SCALE SETS==
+    AUTOMATICALLY increase or decrease your VM capacity 
+
+    -Create Scalling policies to add or remove based on Host metrics 
+    -Create Health checks and set a Repair Policy to replace unhealthy instances
+    -Associate a LOAD BALANCEER to distribute VMs accross AZs
+    -You can scale to 100s or even 1000s of VMs using scale sets 
+    
+    SCALE SETS
+        -Group of identical VMs (same image and size)
+
+==AZURE LOAD BALANCER==
+(Associated with a Scale set)
+    allow you to:
+        -evenly distribute VMs accross multiple AZs to make the app HIGHLY AVAILABLE 
+        
+        -Use load Balancer probe checks (Robust Health Check)
+            2 load balancers:
+
+                1.Application gateway: 
+                    -HTTP/HTTPS web traffic load balancer with URL-based routing,
+                    SSL termination, session persistence, web application firewall 
+
+                2.AZURE load balancer: 
+                    -Supports all TCP/UDP network traffic,port-forwarding, and outbound flows
+
+==Scaling Policy==
+    Determine when a VMs should be addes or removed to meet current capacity requirements 
+
+    Scale out
+        -When an instance should be ADDED to the Scale Set to INCREASE capacity
+        (When CPU threshold (%) greater than X for Y minutes add X servers)
+
+    Scale In
+        -When an instance should be REMOVED to the Scale set to DECREASE capacity
+        (When CPU threshold (%) less than X for Y minutes add X servers)
+
+
+    -OTHER OPTIONS-
+
+        BUILT-IN-HOST- BASED METRICS 
+            -Percentage CPU 
+            -Network (In, Out)
+            -Disk (Read, Write) Bytes
+            -Disk (Read, Write) Operations/Sec 
+            -CPU Credits (Remaining, Consumed)
+
+        AGGREGATIONS
+            -Average
+            -Minimum 
+            -Maximum
+            -Total
+            -Last 
+            -Count 
+
+        OPERATORS
+            -Greater than (>)
+            -Greater than or equal to (>=)
+            -Less than (<)
+            -Less than or equal to (<=)
+            -Equal to (=)
+            -Not equal to (!=) 
+
+
+        ACTIONS 
+            -Increase count by X
+            -Increase percenct by X%
+            -Increase count to X
+            -Decrease count by X 
+            -Decrese percent by X%
+            -Decrease count to X
+
+    =More metrics=
+        App insights:
+            -installs small instrumentation package in app that monitors and sends telemetry to Azure 
+
+        Azure Diagnostic Extension:
+            -agent that runs inside a VM instance 
+            
+            Monitors and saves performance metrics to Azure storage so 
+            detailed information can be collected(More detailed Host-based metrics)
+
+    -Scale In Policy 
+        Determines what VM is removed (deleted) to decrease the capacity of the scale set 
+
+            DEFAULT
+                Delete VM with highest instance 
+                Balaced across AZ=Availability Zones and ADS=Fault Domains
+           
+            NEWEST VM
+                Delete newest create VM
+                Balaced across AZ 
+            
+            OLDEST VM 
+                Delete oldest VM 
+                Balaced across AZ 
+
+    -Update Policy 
+        Determines how VM instances are brought up to date with latest scale set model 
+
+            AUTOMATIC 
+                Increasing with start upgrading in random order 
+            
+            MANUAL 
+                Existing instances must be manually upgraded
+
+            ROLLING 
+                Upgrades roll out in batches with optional pause
+            
+        =Automatic OS upgrades=
+            Helps to ease update management by safely and AUTOMATICALLY  
+            upgrading the OS disk for all instances
+
+
+==Health monitoring==
+    -enabled to determine if server is HEALTHY or UNHEALTHY 
+
+    2 modes:
+        -Application Health extension 
+            Ping an HTTP request to specific path, and except status 200
+        -Load Balancer Probe   
+            Allow to check based on TCP, UDP or HTTP requests 
+        
+
+        --Automatic Repair Policy--
+            If unhealthy instance:
+                then DELETE it and LAUNCH new instance 
+
+==Azure Virtual Desktop==
+    -DESKTOP AND APP VIRTUALIZATION service that runs on the cloud 
+
+    Works accross devices (Windows, Mac, iOS, Android, Linux) 
+    with apps that you can use to access remote dektops and apps.
+
+
+    Used for specific needs like when SECURITY is a concern 
+    because all data is SAVED ON THE SERVER and cannot be left on the
+    DEVICE OF THE USER
+
+
+    =Advantages=
+
+        -Enable secure and productive remote work on any device 
+        (Provides full windows 10 and Windows Server desktop
+        and application virtualization on any personal device)
+
+        -Reduce costs of licensing and infrastructure 
+        (Integration with Microsoft 365 apps for enterprises and MS Teams)
+
+        -Protect against outages (stay productive)
+        (Keep team running during outages by leveraging built-in 
+        AZURE SITE RECOVERY and AZURE BACKUP technologies)
+
+        -Simplify IT management 
+        (Windows Virtual Desktop mangages the virtual desktop infrastructure
+        -> you can focus on users, apps, and OS images instead of hardware and maintenance)
+
+        -Keep application and user data secure
+        (applying right access controls to users and devices with 
+        AZURE ACTIVE DIRECTORY CONDITIONAL ACCESS)
+
+
+5. Azure App Service
+
+==Azure App service==
+    -Quickly DEPLOY AND MANAGE WEB APPS on Azure (without worrying of infrastrucutre)
+    (Known as PaaS(Platform as a Service))
+
+     HTTP BASED-SERVICE for hosting web applications, Rest APIs, and mobile backends
+     (It is the Heroku of Azure)
+
+     =Azure app service takes care of=
+        -Security Patches for OS and languages
+        -Load balancing
+        -Autoscaling
+        -Automated manager
+
+    = Integrations and features =
+        -Azure DevOps (DEPLOYMENTS)
+        -Github Integration
+        -Docker Hub integration 
+        -Package management 
+        -Easy to setup starting environments 
+        -Custom domains
+        -Attaching TLS/SSL certificates
+
+    =Pay based on Azure app service plan=
+        -Shared Tier:
+            Free, shared (linux not supported)
+
+        -Dedicated Tier:
+            Basic, standard , premium, premiumV2 , premiumV3
+
+        -Isolated Tier:
+            
+            (Azure App Services can also run dockers single mutli containers)
+
+
+==Runtimes==
+
+Runtime Environments 
+    -Runtime software/Instructions that are executed 
+    WHILE your program is running 
+
+Runtime (Generally)
+    -What programming language and libraries and framework you are using 
+
+Runtime (Azure App Services)
+    -Predefined Container that has your programming language 
+    and commonly used library for that language installed 
+
+    =Choose a runtime=
+        -.NET 
+        -.NET Core 
+        -Java 
+        -Ruby
+        -Node.js 
+        -PHP 
+        -Python
+
+    (CSPs will usually stop supporting older versions 
+    to enforce customers to keep good security practices 
+    by having latest patches) 
+
+==Custom containers==
+    -to use different runtimes or bundle in a packages or software 
+
+    !.Create own DOCKER container on local environment 
+    2.Push the docker container to AZURE CONTAINER REGISTRY 
+    3.DEPLOY your container image to APP SERVICE 
+
+
+==Deployment Slots==
+    -Create DIFFERENT ENVIRONMENTS of your web-application 
+    associated to a different hostname (useful when staging, or QA environment)
+
+    (A way to quickly clone production environment for other uses)
+
+    You can SWAP environments (this could be how you perform a Blue/Green deploy)
+
+    Promote staging to production by swapping (if something goes wrong you can swap back)
+
+    Blue/green deployment: 
+        -swap the environment with current production 
+        and retire the current production 
+
+
+==App Service environment (ASE)==
+    -Azure App Service feature that provides 
+    FULLY ISOLATED AND DEDICATED ENVIRONMENT
+    for securely running App Service apps at high scale
+
+    Allows to host:
+        -Windows web apps 
+        -Linux Web apps 
+        -Docker containers 
+        -Mobile apps 
+        -Functions 
+
+    Appropiate for application workloads that require:
+        -High scale 
+        -Isolation and secure network access 
+        -High memory utilization 
+
+    Customers can create multiple ASEs within a region or multiple regions 
+    (ideal for HORIZONTAL SCALING STATELESS APPLICATION TIERS 
+    in support of HIGH REQUESTS PER SECOND (RPS) WORKLOADS)
+
+    -ASE comes with its own pricing tier (Isolate Tier)
+    -ASEs can be used to configure security architecture 
+    -Apps running on ASEs can have their access gated by upstream devices(WEB APPLICATION FIREWALLS (WAFs))
+    -App Service Environments can be deployed into AZ using Zone pinning
+
+        =2 deployment types for ASE=
+            1.External 
+                -Exposes the ASE-Hosted apps on an internet-accessible IP address 
+
+                (If the VNet is connected to the On-premise network, apps in the ASE
+                have access to resources there without additional configuration)
+
+                (Because the ASE is within the VNet , it can also access resources 
+                within the VNet without additional configuration)
+            
+
+            2.ILB (Internal Load Balancer) ASE
+                -ILB exposes the ASE-Hosted apps on an IP addres inside your VNet
+                (Internal endpoint is an INTERNAL LOAD BALANCER(ILB))
+
+
+==Azure App Service Plan==
+    -Defines HOW MUCH YOU PAY AND WHAT RESOURCES ARE AVAILABLE 
+        
+        3 pricing tiers for APP SERVICE PLAN:
+        
+        =DEV/Test Tab=
+            =Shared Tiers(2)
+                -FREE 
+                    -1 GB of disk space 
+                    -Up to 10 apps on a single shared instance 
+                    -NO SLA for availabilty 
+                    -Each app has a compute quota of 60 minutes per day
+
+                -SHARED(does not support LINUX)
+                    -Up to 100 apps on a single shared instance 
+                    -NO SLA for availability
+                    -Each app has a compute quota of 240 minutes per day
+
+            =Dedicated Tiers(5)
+
+                -Basic
+                    -More disk space 
+                    -unlimited apps 
+                    -3 levels in this tier that offer varying amounts of compute power, memory, disk storage 
+
+
+            =Production Tab=
+                -Standard 
+                    -Scale out to three dedicated instances 
+                    -SLA of 99.95% Availability 
+                    -3 levels in this tier offering amounts of: 
+                        -Compute Power 
+                        -memory 
+                        -disk storage 
+
+                -Premium 
+                    -scale to 10 dedicated instances 
+                    -availability SLA of 99.95%
+                    -multiple levels of hardware
+
+
+            =Isolated Tab=
+                =Isolated Tier 
+                    -dedicated Azure virtual Network 
+                    -full netword and compute isolation 
+                    -scale out to 100 instances 
+                    -availability SLA of 99.95%
+
+
+6. Azure Container Instances
+
+==Introduction to ACI==
+    -PACKAGE, MANAGE, DEPLOY cloud applications using CONTAINERS 
+    (Fully managed DOCKER AS A SERVICE)
+
+    -Allow you to LAUNCH CONTAINERS without the need to worry about 
+    configuring or managing the underlying virtual machine
+
+    -Designed for isolate containers:
+        -simple applications 
+        -task automation 
+        -build jobs 
+
+    =Why CONTAINERS ARE BETTER OPTION THAN VMs=
+        -containers provisioned in seconds , VMs in minutes 
+        -containers biled per second ,VMs billed per hour (greater savings)
+        -containers GRANULAR AND CUSTOM SIZING OF vCPUs, Memory, and GPUs , VMS sizes are predetermined
+        -ACI can deploy both Windows and Linux containers
+        -PERSIST STORAGE WITH AZURE FILES for your ACI containers 
+        -ACIs are accessed via fully qualified domain name (FQDN) -> eg. customlabel.azureregion.azurecontainer.io.
+        
+        Azure provides Quickstart images to start launching example applications but can also source from:
+            -AZURE CONTAINER REGISTRY 
+            -DOCKER HUB 
+            -PRIVATELY HOSTED CONTAINER REGISTRY 
+
+    =Container groups=
+        -collection of containers that get scheduled on the same host machine 
+
+        Group share:
+            -lifecycle 
+            -resources 
+            -local Network
+            -storage volumes
+        
+        CONTAINER GROUPS are similar to KUBERNETES POD 
+
+        Multi-container groups only support Linux containers currently 
+
+        =Two ways to deploy a multi-container group:
+            -Resource Manager Template(ARM template):
+                deploy additional Azure services resources 
+
+            -YAML file :
+                deployment includes only container instances 
+
+==Container Restart Policies==
+    -specifies what a container should do when their process has completed
+
+    3 restart-policiy options:
+        -ALWAYS(default):
+            containers are ALWAYS RESTARTED.
+            For long running tasks (web-servers)
+
+        -NEVER:
+            Containers RUN ONLY ONE TIME.
+            One off tasks (background jobs)
+
+        -ONFAILURE:
+            Containers that encounter an error
+
+
+
+==Container Environment Variables==
+    Environment Variables (Env Vars) allow to pass configuration details to containers 
+    (Set via Azure Portal, CLI or PowerShell)
+
+    SECURED ENVIRONMENT VARIABLES 
+        -use the "--secure-environment-variables" flag
+
+
+
+==Container Persistent Storage==
+    -Azure containers are STATELESS by default 
+    (When container crashes or stops all state is loss)
+
+    -To PERSIST STATE need to MOUNT external volume such as:
+        -Azure files (file share)
+        -Secret volume 
+        -Empty directory 
+        -Cloud git repo 
+
+        Mount a volume via PowerShell or CLI and specify DETAILS to mount the drive 
+
+
+7. Virtual Networking 
+
+==Introduction to Virtual Networks (vNet)==
+    -Logically isolated section of the Azure Network 
+    where you launch your Azure resources 
+
+
+    =Azure DNS=
+        Manage your own DNS domain 
+
+    =Virtual Network (vNET)=
+        logically isolated section of Azure Networkd 
+            -Address spaces 
+            -Route tables 
+            -Subnets 
+
+    =Network Security Groups=
+        Virtual firewall at the subnet or NIC level 
+
+    =ExpressRoute=
+        50 Mbps - 10 Gbps connecion between On-premise to Vnet 
+
+    =Virtual WAN=
+        centralized network to route different network connections
+
+    =Virtual Network Gateway=
+        site-to-site VPN connection between an Vnet and local networks 
+
+    =Network Interfaces 
+        Virtual network device to allow your VMs to communicate using IP protocols
+        
+
+==VNet peering==
+    -connect multiple VNet so they act as one network 
+
+    =2 types of VNet peering=
+        
+        -Regional VNet Peering 
+            Peer two Vnets from the same region 
+
+        -Global VNet Peering 
+            Peer two Vnets from two different regions 
+
+
+==Network interfaces==
+
+    =Network interface=
+        -SOFTWARE OR SOFTWARE between two pieces of equipment or protocol layers in a computer network 
+
+    =NIC=
+        -COMPUTER HARDWARE COMPONENT that connects computer to computer network
+
+        Known as:
+            -network interface card 
+            -network adapter
+            -LAN adapter 
+            -physical network interface 
+
+        --COMMUNICATE USING INTERNET PROTOCOLS (IP)--
+            Devices for:
+                Data link layer (Layer 2)
+                Physical layer (layer 1)
+
+        =AZURE NETWORK INTERFACES=
+            attached to Azure VM instance (without NIC the VM instance has no way to communicate)
+            =Azure VM instance can have multiple NICs=
+
+
+==Subnets==
+    -LOGICAL DIVISION OF AN ADDRESS SPACE which help you 
+    DEFINE DIFFERENT KINDS OF WORKLOADS and allow to apply virtual isolation within network 
+
+    Azure resource -> choose the subnet you want to launch -> IP from that subnet is assigned to resource 
+
+    =Associating a route table=
+        -subnet needs a Route table so it can access
+
+    
+    =Public Vs Private Subnet=
+        -describes whether a subnet is reachable from the internet or not 
+            (Azure has no concepts of private and public subnets)
+
+         Configure subnets to ensure they dont reach the internet:
+            -NO route via their route table to the Internet Gateway    
+    
+
+    =Associating Network Security Gateways (NSG)
+        -associate an NSG to:
+
+            -protect traffic entering and leaving subnet by:
+
+                -applying security rules that can ALLOW or DENY access based 
+                    
+                    -IP address
+                    -Port 
+                    -Protocol 
+
+
+    =Gateway Subnet=
+        Azure special type of gateway subnet used by AZURE VIRTUAL NETWORK GATEWAY and that 
+        service launches specialized VMs into that subnet 
+    
+
+==Azure DNS==
+    -Hosting service for DNS DOMAINS that provides name resolution by using Microsoft Azure infrastructure
+
+    =DNs (Domain Name System)=
+        -Service responsible for translating (or resolving) SERVICE NAME to its IP ADDRESS 
+
+    
+        =Public DNS (internet facing)=
+            -Manage domains for INTERNET accessible domains 
+                -Pointing domain to website
+                -Setting records to prove you own the domain
+                -Records to connect the domain to email server
+
+        =Private DNS (internal facing)=
+            -allows to use own custom domains instead of Azure provided domains 
+                -Azure services use FULL QUAILIFIED DOMAIN NAME(FQDN) to identify services on the network
+
+                (CANT USE AZURE DNS TO BUY A DOMAIN NAME) -> Purhcase through App services or Third-party provider and have Azure DNS manager
+
+
+==Virtual Private Network==
+    -EXTENDS A PRIVATE NETWORK ACCROSS A PUBLIC NETWORK 
+    and enables users to SEND AND RECEIVE DATA ACROSS 
+    SHARED OR PUBLIC NETWORKS as if their computing devices 
+    where connected to the private network
+    
+
+    =Virtual Network Gateway=
+        -software VPN device for your Azure Virtual network 
+        -When you deploy two or specialized VMs in specific subnet you need to create called a "Gateway subnet"
+        -VMs contain routing tables and run specific gateway services 
+        -Choose GATEWAY TYPES : determine if is VPN GATEWAY or EXPRESSROUTE GATEWAY 
+
+
+==Azure Express Routes==
+    -Create PRIVATE CONNECTIONS between azure datacenters 
+    and infrastructure on your premises or colocation environment 
+
+    -They don't go in public internet so they offer:
+        -more reliability 
+        -faster speeds
+        -consistent latencies 
+        -higher security
+
+    -Conectivity can be from:
+        any to any (IP VPN) network
+        point to point ethernet network 
+        Virtual crosss-connection 
+    Through a connectivity provider at a colocation facility 
+
+
+    =Express route direct= 
+        -allows GREATER BANDWIDTH CONNECTIONS from 50 Mbps to 10 Gbps 
+        (Ideal where for hybrid soltions with massive amount of DATA and LATECNY matters)
+
+==Private Links==
+    -ESTABLISH SECURE CONNECTIONS between Azure resources so traffic REMAINS WITHIN THE AZURE NETWORK
+
+    =PRIVATE LINK ENDPOINT is a NETWORK INTERFACE that connects privately 
+    and securely to a service powered by Azure Private Link.
+    (Uses private IP address from Vnet) 
+
+    =Azure Services that work with Private link:
+        -Azure storage
+        -CosmoDB
+        -SQL
+
+    =PRIVATE LINK SERVICE allows to connect own workload to Private Link.
+    (Need AZURE STANDARD INTERNAL LOAD BALANCER and associate it with the link service)
+
+8.Storage Accounts
+
+==Storage Services==
+    
+    =AZURE BLOB SERVICE 
+        - (OBJECT SERVERLESS STORAGE) Store large files and large amounts of unstructured files 
+        Pay for what you store, unlimited storage, no-resizing volumens, filesystem protocols.
+
+
+    =AZURE DISK STORAGE
+        -Virtual volume, choose SSD or HDD, encryption by default, attach volume to VMs
+
+
+    =AZURE FILE STORAGE 
+        -shared volume that you can access and manage like a file server (SMB -> Server Message Block protocol)
+
+
+    =*AZURE QUEUE STORAGE 
+        -(MESSAGING QUEUE) A data store for queuing and reliably delivering messages between applications
+
+
+    =*AZURE TABLE STORAGE 
+        -(WIDE-COLUMN NOSQL DATABASE) A NoSql store that hosts unstructured data 
+        independent of any schema
+               
+    
+    =AZURE DATA BOX / AZURE DATABOS HEAVY
+        -A rugged briefcase computer and storage designed to move 
+        TERABYTES OR PETABYTES of data
+
+    =AZURE ARCHIVE STORAGE 
+        -Long term cold storage for when you need to hold onto files 
+        for years on the cheapest storage options
+
+    =AZURE DATA LAKE STORAGE 
+        -A centralized repository that allows you to store 
+        structured and unstructured data at any scale
+
+
+==Introduction to Storage Accounts==
+    -Contains all of Azure storage data objects such as:
+        -Blobs
+        -files
+        -queues
+        -tables
+        -disks
+          
+    Several types of storage accounts(DIFFERENT FEATURES , OWN PRICING MODELS):
+
+        (Storage Type = Account kind)
+
+        -General purpose v1 (legacy)
+        -General purpose v2 
+        -Blob storage (legacy)
+        -BLockBlobStorage
+        -FileStorage
+
+
+        Features of Storage accounts:
+
+            -SUPPORTED SERVICES (What can I put in this storage account):
+                -BLOB
+                -FILE
+                -QUEUE 
+                -TABLE 
+                -DISK 
+                -DATA LAKE GEN2
+
+            -PERFORMANCE TIERS(how fast will my read and writes be):
+                -Standard 
+                -Premium 
+
+            -ACCESS TIERS (how often do I need quick access to files):
+                -HOT 
+                -COOL 
+                -ARCHIVE
+
+            -REPLICATION (how many redundant copies should be made and where)
+                -LRS 
+                -GRS 
+                -RA-GRS
+                -ZRS 
+                -GZRS
+                -RA-GZRS
+
+            -DEPLOYMENT MODEL (who should deploy the supported services)
+                -RESOURCE MANAGER (Used most cases)
+                -CLASSIC
+
+==Storage Comparison==
+    (CHECK IMAGES =8.StorageAccounts/2.StorageAccounts/StorageAccounts.png)
+
+
+==Core storage services==
+    =5 core storage=
+
+        =IN Storage account section
+-------------------------------------------------------------------------------
+        =AZURE BLOB=
+            -Massively scalable OBJECT STORE for text and binary data 
+            (Includes support for big data analysis through Data Lake Storage Gen 2)
+
+        =AZURE FILES=
+            -Managed FILE SHARES for cloud or ON-Premises deployments 
+
+        =AZURE QUEUES=
+            -NOSQL STORE for schemaless storage of structured data 
+
+        =AZURE TABLES=
+            -MESSAGING STORE for reliable messaging between application components 
+
+--------------------------------------------------------------------------------
+        =In Disk Section
+
+        =AZURE DISKS=
+            -BLOCK-LEVEL STORAGE volumes for Azure VMs
+
+
+==Performance Tiers (Blob storage)==
+
+    IOPS(INPUT/OUTPUT PER SECOND)->The higher the IOPS the faster the drive can read and write 
+
+    2 types of performance:
+        -Standard 
+            -Stored in HDDs (Has moving parts, arm that needs to read and write data sequential to a disk
+            ,good for writing and reading large amounts of data that is close together)
+            -Varied performance based on access tier (Hot, cool, archive)
+            
+            -Use cases:
+                -Backup and disaster recovery 
+                -Media content 
+                -Bulk data processing 
+
+
+        -Premium
+            -Stored on SSDs (SSD have no moving parts and data is distributed randomly -> That is why it reads and writes so fast )
+            -Optimize low latency 
+            -Higher throughput 
+
+            -Use cases:
+                -Interactive workloads 
+                -Analytics 
+                -AI or ML 
+                -Data transformation 
+
+
+==Access Tiers==
+    - 3 types of access tiers for STANDARD STORAGE
+        (Blob storage)
+        -Hot 
+            -Data accessed frequently
+            -Highest storage cost, lowest access cost 
+            
+            Use case:
+                Active use or expected to be accessed frequently
+                Data staged for proccesing and eventual migration to the cool access tier
+
+        -Cool
+            -Data that's infrequently accessed and stored for at least 30 Days 
+            -Lower storage cost, higher access cost
+
+                Use case:
+                    Short-term backup disaster recovery datasets
+                    Older media content not viewed frequently anymore but expected available immediately when accessed
+                    Large data sets that need to be stored cost effectively while more data is being gathered for future processing
+        -Archive
+            -Rarely accessed and stored for at least 180 days 
+            -Lowest storage cost, highest acesss cost 
+            
+
+
+        ACCOUNT LEVEL TIERING 
+            -Blob that does'nt have assigned tier infers the tier from the Storage Account access tier setting 
+            
+        BLOB-LEVEL TIERING
+            -Upload a blob to the tier of choice 
+            (Changing tiers happens instantly except moving OUT OF ARCHIVE)
+
+        REHYDRATING A BLOB 
+            -Moving a blob out of archive takes HOURS (REHYDRATING)
+
+        BLOB LIFECYBLE MANAGEMENT 
+            -Create rule-based policies to transition data to different tiers 
+            (Eg. After 30 days move to Cool storage)
+
+        
+
+        =Moving from a Cooler tier:
+            -Operation is billed as a WRITE OPERATION to destination tier 
+            -Where the write operation (per 10,000) and data write (per GB) charges of the destination tier apply
+
+
+        =Moving from a Hotter tier:
+            -Operation is billed as a read from the source tier
+            -Where the READ OPERATION (per 10,000) and data retrieval (per GB) charges of the source tier apply
+            -Early deletion charges for any blob moved out of the cool or archive tier may apply as well
+
+        
+    =Cool and archive deletion=
+        -Any blob that is moved into cool tier(GPV2 accounts only) is subject to cool early deletion period of 30 days 
+        -Any blob that is moved into the archive tier is subject to an archive early deletion period of 180 days(Charge is prorated)
+
+
+==Replication and data redundancy==
+    -Stored multiple copies of the data so that is protected from:
+        -planned events 
+        -transient hardware failures 
+        -network power outages 
+        -massive natural disasters 
+
+        (The GREATER LEVEL OF REDUNDANCY the more EXPENSIVE the cost of replication)
+
+
+    NEED TO CHOOSE REPLICATION TYPE:
+        =Primary Region redundancy  -> Disaster Recovery and Failovers
+            -Locally Redundant Storage (LRS)
+                -Copies data SYNCHRONOUSLY in primary region
+                -99.99999999999% (11 nines) durability
+                -CHEAPEST OPTION
+
+            -Zone-redundant storage (ZRS)
+                -Copies data SYNCHRONOUSLY across 3 AZs in primary region
+                -99.999999999999 (12 nines) durability
+
+        =Secondary Region Redundancy -> Disaster Recovery and Failovers (More recovery)
+                -Replicate to a secondary region in case of primary regional disaster
+                -The secondary region is determined based on your primary's pair region
+                -Secondary region isn't available for read or write access (Except in event of FAILOVER)
+
+                    -Geo redundant storage (GRS)
+                        -Copies data SYNCHRONOUSLY (guaranteed) in primary region 
+                        -Copies data ASYNCHROUNOUSLY (not guaranteed) to another region
+                        -99.9999999999999999 (16 nines) of durability 
+
+                    -Geo zone redundant storage (GZRS)
+                        -Copies data SYNCHRONOUSLY accross 3 AZs in a physical region 
+                        -Copies data ASYNCHROUNOUSLY to another region 
+                        -99.9999999999999999 (16 nines) of durability 
+
+
+        =Secondary Region Redundancy with READ ACCESS -> Read Replicas
+            -Data is replicated SYNCHRONOUSLY to primary region 
+            -Data will be "in-sync" with your primary and you'll have READ ACCESS
+
+                -Read-access geo-redundant storage (RA-GRS)
+                    -Copies data SYNCHRONOUSLY in primary region 
+                    -Copies data SYNCHRONOUSLY to another region
+                    -99.9999999999999999 (16 nines) of durability 
+
+                -Read access geo zone-redundant storage (RA-GZRS)
+                    -Copies data SYNCHRONOUSLY accross 3 AZs in a physical region 
+                    -Copies data SYNCHRONOUSLY to another region 
+                    -99.9999999999999999 (16 nines) of durability 
+
+==Introduction to AZURE BLOB==
+    -OBJECT STORAGE optimized for STORING MASSIVE AMOUNTS OF UNSTRUCTURED DATA 
+
+    (UNSTRUCTURED DATA is data is data that doesn't adhere to a particular data model or definition, such as TEXT OR BINARY)
+        
+    =Composed of components=
+        -Storage Account-
+            Unique namespace in AZURE for your data 
+
+        -Containers-
+            Similar to a folder in a file system 
+
+        -Blobs-
+            Actual data being stored 
+
+
+=Azure Blob Types=
+    3 types of BLOB:
+        -BLOCK BLOBS:
+            -Store text and binary data 
+            -Made up of blocks of data that can be managed individually 
+            -Store up to about 4.75 TB of data 
+
+
+        -APPEND BLOBS:
+            -Optimized for append Operations
+            -Ideal for scenarios such as LOGGING DATA from Virtual Machine
+
+
+        -PAGE BLOBS:
+            -Store random access files up to 8 TB in size 
+            -Store virtual hard drive (VHD) files and serve as disks for Azure Virtual Machine
+
+=AZ Copy=
+    -COMMAND UTILITY that you can use to copy BLOBS OR FILES to or from a storage account
+
+    1.Executable File you download 
+    
+    2.Need to have level of authorization via attach roles 
+        -To download:
+            Storage Blob Data Reader 
+
+        -To upload:
+            Storage Blob data Contributor
+            Storage Blob data Owner 
+
+    3. Gain access either via:
+        -Azure Active Directory (AD)
+        -Shared Access signature (SAS)
+
+    4.Use COPY COMMAND to UPLOAD and DOWNLOAD
+        
+
+==Azure Storage Explorer==
+    -STANDALONE APP that makes it easy to work with Azure Storage data on WINDOWS, macOS, and LINUX.
+    (Create Blob Containers, upload files, create snapshots of disk, and more)
+
+    
+
+==Introduction to Azure files==
+    -Fully managed FILE SHARE in the cloud
+    
+    FILE SHARE - CENTRALIZED SERVER FOR STORAGE that allows MULTIPLE CONNECTIONS 
+    (Having one big shared drive that everyone (Virtual Machines) can work on at the same time)
+    
+    To Connect to the file share a NETWORK PROTOCOL you use:
+        -Server Message Block (SMB)
+        -Network File System (NFS)
+
+    When the connection is established the "file share's filesystem 
+    will be accessible in the specific directory within your own directory tree" (known as MOUNTING) 
+
+
+==Azure FIles Use Cases==
+    -Completely REPLACE or SUPPLEMENT  On-premsises file servers Network Attach Storage (NAS) devices
+    
+    -LIFT AND SHIFT your On-premise storage to the cloud via Classic Lift or Hybrid Lift
+        Lift and shift: move workloads without rearchitecting (importing local VMs to the cloud)
+        
+        -Classic Lift:
+            Where both the application and its data are moved to Azure 
+
+        -Hybrid lift:
+            Where the application data is moved to Azure files (APPLICATION continues to run on-premises)
+
+    -Simplify cloud development 
+        -Shared application settings:
+            Multiple VMs and developer workstations need to access the same config files
+
+        -Diagnostic Share:
+            All VMs log to the file share, developers can mount and debug all logs in a centralized place 
+
+        -Dev/Test/Debug:
+            Quickly share tools for developer needed for local environments 
+
+    -Containerization 
+        Use Azure Files to persist volumes for stateful containers 
+
+
+    Why use AZURE FILES instead of setting own FILE SHARE SERVER?
+        -Shared Access:
+            Alrady setup to work with standard networking protocols SMB and NFS 
+
+        -Fully managed:
+            Its kept up to date with security patches (designed to scale)
+
+        -Scripting and Tooling:
+            Automate the management and creation of file shared with AZURE API and POWERSHELL 
+
+        -Resiliency:
+            Build to be durable and always working 
+
+==Azure File Sync==
+    Service that allows you to CACHE Azure FIles share on an 
+    ON PREMISES WINDOWS SERVER or CLOUD VM
+
+    -Can use any protocol that's available on Windows Server to access data locally (SMB, NFS, FTPS)
+    -Can have as many caches as you need to accross the world 
+    
+9.Migration Options
+
+==Azure Cloud adoption framework== (DPRA - GM)
+    -Whitepaper that is a STEP BY STEP PROCESS 
+    to help organizations plan and migrate workloads to Azure
+
+    1. Define Strategy:
+        -Understand motivations 
+        -Business outcomes
+        -Business justification 
+        -First adoption project 
+
+    2.Plan 
+        -Rationalize digital estate 
+        -Intial organization alignment 
+        -Skills readiness plan
+        -Cloud adoption 
+
+    3.Ready 
+        -Azure readiness guide 
+        -First landing zone 
+        -Expand the blueprint 
+        -Best practice Validation
+
+    4. Adopt 
+        1.Migrate 
+            -First workload migration 
+            -Expanded scenarios 
+            -Best practice validation 
+            -Process improvements 
+
+        2.Innovate 
+            -Innovation guide 
+            -Expanded scenarios 
+            -Best practice validation 
+            -Process improvements 
+        
+    5.Govern 
+        -Methodology 
+        -Benchmark 
+        -Initial best practice 
+        -Government maturity 
+
+    6.Manage 
+        -Business Commitments 
+        -Operations baseline 
+        -OPS Maturity 
+
+    =Security Roles and Responsibilities=
+    
+    1.Business and Technology Outcomes
+        -Focuses on planning to identify opportunities and building 
+        to execute and capture value, ensuring sustained operations and adaptability.
+
+    2.Security Outcomes:
+        -Governance: 
+            Covers architecture and compliance.
+
+        -Prevention: 
+            Includes access control.
+
+        -Asset Protection: 
+            Encompasses security operations and response.
+
+    3.Role Types: 
+        Highlights leadership roles, architect roles, and posture & compliance roles.
+
+    4.Responsibilities:
+        -Leadership & Compliance: Security leadership, architecture, compliance management, policy/standards, and posture management.
+
+        -Engineering: Platform and application security engineering.
+
+        -Security Operations: Identity/key management, people/data security, and DevSecOps.
+
+    5.Investment Monitoring & Response: Includes threat hunting and incident preparation.
+
+    6.Infrastructure Security: Covers network, server, and endpoint security.
+
+    7.Threat Intelligence: Focuses on incident readiness and maintaining a feedback loop for continuous improvement.
+
+
+==Azure Migrate==
+    -Offers streamline service for MIGRATION, MODERNIZATION, OPTIMIZATION ON AZURE
+
+    -Simplifies the pre-migration processes like:
+        -Discovering 
+        -Assessing 
+
+        -Sizing On premises resources for:
+            -Infrastructure 
+            -Data 
+            -Applications
+
+    With Extensible Framework, Azure Migrate integrates with THIRD-PARTY TOOLS
+    (Broadening its range of supported scenarios) 
+
+        Offers:
+            -Unified Migration Platform:
+                Centralized portal to initiate, execute, and monitor Azure migration journey
+
+            -Diverse toolset:
+                suite of tools for both assessment and migration.
+                Features:
+                    -AZURE MIGRATE: DISCOVERY AND ASSESSMENT 
+                    -MIGRATION AND MODERNIZATION
+
+            Seamlessly integrates with other Azure services, tools and third-party offerings 
+            from INDEPENDENT SOFTWARE VENDORS (ISVs)
+
+            -Comprehensive Migration and Modernization Capabilities:
+                -Assess 
+                -Migrate 
+                -Modernize
+
+            -Servers, Databases,and Web-apps:
+                Assess and migrate On-premises servers, web-apps, and Sql Server instances to Azure
+
+                    -Databases:
+                        Analyze on-premises SQL server instances and databases,
+                        and migrate them to:
+                            -Azure SQL on a VM, 
+                            -Azure SQL managed instance
+                            -Azure SQL Database
+
+                    Web applications:
+                        Evaluate on-premises web applications and transition them to:
+                            -Azure App Service 
+                            -Azure Kubernetes Service 
+
+                    Virtual Desktops:
+                        Review your on-site VIRTUAL DESKTOP INFRASTRUCTURE (VDI) 
+                        and move it to Azure Virtual Desktop 
+
+                    Data Transfer:
+                        Efficiently and affordably transfer vast data volumes to Azure using 
+                        AZURE DATA BOX products 
+                    
+
+==Azure Migrate Integrated Tools==
+
+    -Azure Migrate: Discovery and Assessment
+        This tool helps you discover and evaluate your on-premises servers 
+        (including SQL databases and web applications) running on VMware, Hyper-V, or physical hardware. 
+        It prepares your infrastructure for migration by identifying what you have and its readiness for Azure.
+
+    -Migration and Modernization
+        The primary tool for actually moving your virtual machines to Azure. 
+        It supports migration of VMware VMs, Hyper-V VMs, physical servers, 
+        and even VMs from other cloud platforms to Azure.
+
+    -Data Migration Assistant
+        Specifically designed for SQL Server migrations, 
+        this tool assesses your databases for compatibility issues 
+        and recommends the best migration path to either Azure SQL Database, Azure SQL Managed Instance, or SQL Server on Azure VMs.
+
+    -Azure Database Migration Service
+        A fully managed service that handles your database migrations with minimal downtime.
+        It's the go-to solution for moving on-premises databases to Azure SQL solutions.
+
+    -Movere
+    Provides rapid IT environment visibility, giving you a complete picture of your 
+    infrastructure within 24 hours through its SaaS PLATFOMRM. Excellent for initial assessments.
+
+    -Web App Migration Assistant
+        A specialized tool for evaluating and migrating your on-premises web applications 
+        to Azure App Service. It works as a standalone solution for web app migrations.
+
+    -Azure Data Box
+    The solution for large-scale offline data transfers. 
+    When moving terabytes or petabytes of data, these physical devices securely 
+    transport your data to Azure data centers.
+
+
+==Azure Databox==
+    -Lets you send TERABYTES OF DATA INTO AND OUT OF AZURE in a quick, inexpensive and reliable way
+
+    -Each storage device has a maximum usable storage capacity of 80 TB 
+    and is transpored to your datacenter through a regional carrier
+
+    -Designed to help customers with slow or limited INTERNET CONNECTIVITY 
+    to move large volumes of data to the cloud
+
+    =USE CASES=
+        -IMPORT data to azure for:
+            -One-time migrations:
+                Moving large on-premises data, transitioning offline tapes, relocating VMs, 
+                SQL servers, applications, and transferring historical data for Azure-based analysis
+
+            -Initial Bulk Transfers:
+                Large-scale transfers using Data box, followed by incremental network transfers 
+                Example: Moving vast backups with partners like COMMVAULT
+
+            -Periodic uploads:
+                Transferring large volumes of data generated periodically 
+                like video content from oil rigs or windmill farms
+
+        -EXPORTING from Azure, Data box is used for:
+            -Disaster recovery:
+                Restoring Azure data on-premises quickly
+
+            -Security requirements:
+                Meeting mandates that require data extraction from Azure storage tiers like US Secret 
+
+            -Migration:
+                Moving data back to on-premises or to a different cloud provider
+
+    =HOW IT WORKS=
+        1.Customers order a DATA BOX from the AZURE PORTAL 
+
+        2.When the Data Box arrives, customers connect it to their network 
+        and configure it using the AZURE PORTAL
+
+        3.Customers copy data to the Data Box using standard file transfer protocols (SMB, NFS)
+
+        4.Once data is transfer is complete, customers ship the DATA BOX BACK TO AZURE 
+
+        5.Azure copies the data from the DATA BOX to the Customer's AZURE STORAGE ACCOUNT
+
+
+10.Microsoft Entra ID
+    -Azure AD changed to : Microsoft Entra ID
+    -Azure AD External Identities changed to : Microsoft Entra External ID
+
+    ==Introduction to Entra ID==
+        
+        AZURE ACTIVE DIRECTORY (AD)
+            -Cloud-based IDENTITY AND ACCESS MANAGEMENT service 
+                -Manage users
+                -Sign-Ins 
+                -access to AD-related resources
+
+            =Is Microsoft's cloud based IDENTITY AND ACCESS MANAGEMENT SERVICE 
+            which helps your employees sign in and access resources 
+
+                -External Resources:
+                    -Microsoft Office 365
+                    -Azure portal 
+                    -SaaS applications
+
+                -Internal Resources:
+                    -Applications within your internal networking 
+                    -Access to workstations on-premise
+
+            USE AZURE AD to implement SINGLE-SIGN ON (SSO)
+
+
+    =Azure Active Directory (Azure AD) comes in four editions:
+        1.Free:
+            MFA, SSO, Basic securtity and Usage reports, user management 
+
+        2.Office 365 Apps:
+            Company branding, SLA,Two-Sync between On-premise and cloud 
+
+        3.Premium 1:
+            Hybrid architecture, Advanced Group Access, Conditional Access
+
+        4.Premium 2:
+            Identity Protection, Identity Governance
+
+
+==Entra ID USE CASES==
+    AUTHORIZE AND AUTHENTICATE to multiple sources
+        -On-premise AD 
+        -Web-application
+        -Allow users to login with their IpD (Facebook or Google)
+        -Office 365 or Microsoft Azure 
+
+
+==Active Directory vs Azure Active Directory (Entra ID)==
+    
+    -Microsoft Active Directory (On premise)
+        Introduced in Domain services in Windows 2000 
+        to give organizations the ability to manage multiple on-premises 
+        infrastructure components and systems using a single identity per user  
+
+    -Microsoft Azure AD (Cloud)
+        Takes the AD to the next level by providing organizations with an 
+        IDENTITY AS A SERVICE (IDaaS) solution for all their apps 
+        ACROSS CLOUD and ON-PREMISES
+
+
+==Terminology==
+
+    -Domain
+        area of network organized by a single authentication database 
+
+    -Domain controller
+        Server that AUTHENTICATES user identities and AUTHORIZES their access to resources 
+
+    -Domain computer
+        Computer registered with a CENTRAL AUTHENTICATION DATABASE (AD object)
+
+    -AD Object 
+        Basic element of Active Directory such as:
+            -users
+            -groups 
+            -printers 
+            -computers 
+            -shared folders 
+
+    -Group Policy Object (GPO)
+        -Virtual collection of policy settings (controls what ADs have access to)
+
+    -Organization Units (OU)
+        Subdivision within an Active Directory into which you can place 
+            -users
+            -groups     
+            -computers
+            -other organizational units 
+
+    -Directory Service (Active Directory Domain Services (AD DS)) -> Runs on a Domain Controller
+        Provides the methods for storing directory data and 
+        making this data available to network users and administrators 
+
+
+==AD DS (Microsoft Entra Domain Services)==
+    When doing LIFT-and-Shift from On-premise to Microsoft Azure and migrating Active Directory
+    Azure does not support some DOMAIN SERVICES 
+
+
+    AZURE ACITVE DIRECTORY DOMAIN SERVCES (AD DS) provides MANAGEDE DOMAIN SERVICE such as:
+        -Domain joins
+        -Group policies 
+        -Lightweight directory access protocol (LDAP)
+        -Kerberos / NTLM authentication 
+
+    You can use them without the need to:
+        -deploy , manage and patch domain controllers (DCs) in the cloud 
+
+
+==Single Sign-on (SSO) in Entra ID==
+    -Feature that allows users to AUTHENTICATE ONCE with Azure AD and then 
+    ACCESS MULTIPLE APPLICATIONS AND SERVICES WITHOUT HAVING TO AUTHENTICATE AGAIN
+
+    When user signs intro Entra ID with credentials, Entra ID creates a SECURITY TOKEN 
+    that can be used to access other RESOURCES within the same organization 
+        -Token can be used to authenticate the user to other cloud-based or On-premises applications 
+        that have been intregated with Entra ID
+
+    SSO supports multiple apps like:
+        Cloud based:
+            -Microsoft 365
+            -SalesForce 
+            -Dropbox 
+
+        On-Premises:
+            -SharePoint
+            -SAP
+
+    SSO can also be used with custom-built applications using industry-standard protocols such as:
+        -SAML
+        -OpenID Connect 
+        -OAuth
+
+    Choosing an SSO method depends on how the application is configured for authentication
+        -Cloud applications can use 
+            -OpenID, 
+            -Connect, 
+            -OAuth, 
+            -SAML, 
+            -password-based,
+            -linked for SSO 
+        (SSO can also be disabled)
+
+        -On-premises applications can use
+            -password-based,
+            -Integrated Windows,
+            -Authentication, 
+            -Header-based,
+            -linked for SSO
+        The ON-premises choices work then applications are configured for APPLICATION PROXY
+
+    Main SSO Protocols supported in Azure:
+
+        -Open ID and OAuth:
+            OpenID Connect is an identity layer built on top of OAuth 2.0
+            Allows for authentication and authorization of users in a secure and standardized mannner
+            (Used for WEB AND MOBILE APPLICATIONS)
+
+        -SAML(Security Assertion Markup Language):
+            XML based protocol used for exchanging authentication and authorization data between
+            and identity provider and a service provicer
+            (Used for FEDERATED authentication scenarios)
+
+        -Password-based authentication:
+            Traditional username/password authentication method where users provice their credentials 
+            directly to authenticate
+
+        -Linked authentication:
+            Ability to link multiple accounts from a different identity providers to a single
+            user identity.
+            (Allows users to authenticate using any of their linked accounts)
+
+        -Integrated Windows Authentication (IWA):
+            Users access applications using their Windows domain credentials, utilizing their 
+            CURRENT WINDOWS SESSION for authentication 
+
+        -Header Based authentication:
+            The application accepts an authentication token in the form of a header in each 
+            request 
+            (Token validated by the application to authenticate the user)
+
+    =Multi Factor Authentication (MFA)=
+        -Security control where after you fill your username/email and password
+        YOU HAVE TO USE A SECOND DEVICE such as Phone to confirm that you're logging in
+        (Protects against people who stole the PASSWORD)
+
+==External Identities==
+    -Allow people outside your organization to access your apps and resources
+    (Sign with whatever identity they prefer)
+
+        -Partners, distributos, suppliers, vendors, and other guests users can 
+        BRING THEIR OWN IDENTITIES (Supports Google and Facebook logins)
+
+        -Share apps with external users (B2B collaboration)
+        -Develop apps intended for other AzureAD Tenants (Single-tenant or multi-tenant)
+        -Develop white-labeled apps for consumers and customers (Azure AD B2C)    
+
+==Conditional Access==
+    -Provides extra layer of security before allowing authenticated users to access data or other assets 
+
+    -Implemented via CONDITIONAL ACCESS POLIICES 
+    (Set of rules that specify the CONDITIONS under which sign-ins are EVALUATED and ALLOWED)
+
+    Ex:
+        if the user account name is a member of a group for users that are assigned the 
+            EXCHANGE, USER, PASSWORD, SECURITY, SHAREPOINT , OR GLOBAL ADMINISTRATOR ROLES:
+                Require MFA before allowing access
+
+            (Policy enables MFA enforcement based on group membership, 
+            simplifiying the process compared to configuring MFA 
+            for individual users when roles change)
+    
+
+    -Conditional access analyzes:
+        -Signals 
+            -User and location 
+            -Device 
+            -Application 
+            -Real time risk 
+
+        -Verifies every access attempt via ACCESS CONTROLS 
+            -Requires MFA 
+            -Allow Access
+            -Block Access
+
+    =Signals=
+        Metadata associated with an identity attempting to gain access
+
+        -User or group membership
+            Policies targer specific users and groups (including admin roles),
+            giving admins fine-grained control over access 
+
+        -Named location information/IP location information 
+            Ip address ranges are used to permite or deny access (geographical locations) 
+
+        -Device 
+            Policies can be applied based on the platform or status of a user's device 
+
+        -Application 
+            Users attempting to access specific applications can trigger different Conditional Access Policies 
+
+        -Real time sign-in risk detection
+            Sigals in Azure AD identity protection detect risky sign-ins 
+            IF risk emerge , policies can prompt actions such as
+                -Password requests
+                -Multifactor authentication 
+                -Block access pending adming intervention 
+
+        -Cloud apps or actions 
+            Can include or exclude cloud applications or user actions that will be subject to the policy 
+
+        -User risk 
+            -Customers with Identity protection, user risk can be evaluated as part of a Conditionnsl Access Policy
+            -User risk represents the probability that a given identity or account is compromised 
+
+    =Common desicions=
+        Define access controls THAT DECIDE WHAT LEVEL OF ACCESS based on signal information
+
+        -Block access:
+            Most restrictive decision 
+
+        -Grant access:
+            Least restrictive decision, still require one or more of the following:
+                -Requiere multi-factor authentication 
+                -Require device to be marked as compliant 
+                -Require Hybrid Azure AD joined device 
+                -Require approved client app
+                -Require app protection policy (preview)
+        
+        Can use CONDITIONAL ACCESS POLICIES IN:
+            -Microsoft 365 Business Premium 
+            -Microsoft 365 E3 and E5
+            -Azure AD Premium P1 
+            -Azure AD Premium P2 licenses
+
+
+11.Security
+    
+=Zero Trust model==
+    "TRUST NO ONE, VERIFY EVERYTHING"
+
+        Malicious actors being able to by-pass conventional ACCESS CONTROLS 
+        demonstrates traditional security measures are no long sufficient
+
+    =MICROSOFT'S ZERO TRUST MODEL=
+        3 Principles:
+            1.Verify Explicitly 
+            2.Least Privileged Access 
+            3.Assume Breach
+
+        6 pillars:
+            -Identities (emphasis on this one)
+            -Endpoints (Devices)
+            -Apps 
+            -Data 
+            -Infrastructure 
+            -Network
+
+==Zero trust principles==
+
+    -Verify Explicitly 
+        Always authenticate and authorize based on all available data points
+
+    -Least privileged access / Principle of Least Privilege (PoLP)
+        Limit user access with JUST-IN-TIME and JUST-ENOUGH-ACCESS (JIT/JEA),
+        risk-based adaptive policies, and data protection
+
+
+    -Assume breach 
+        Minimize blast radius and segment access.
+        Verify end-to-end encryption and use analytics to get visibility, 
+        drive threat detection, improve defenses
+
+==Defense In-depth Model==
+
+    =7 Layers of security=
+    1.Data 
+        Accss to business and customer data, encryption to protect data 
+
+    2.Application 
+        Applications are secure and free of security vulnerabilities 
+
+    3.Compute
+        Access to virtual machines (ports, on-premise, cloud)
+
+    4.Network 
+        Limit communication between resources using segmentation and access controls 
+
+    5.Perimeter
+        distributed denial of service (DDoS) protection 
+        to filter large-scale attacks before they can cause a denial of service for users 
+
+    6.Identity and access 
+        Controlling access to infrastructure and change control 
+
+    7.Physical 
+        limiting access to a datacenter to only authorized personnel
+
+    
+==Microsoft Defender for cloud (Azure Defender)==
+    -Provides ADVANCED PROTECTION for your Azure and On-Premise workloads 
+    (AZURE DEFENDER can be found in the AZURE SECURITY CENTER)
+
+    Azure defender is composed of:
+        -Coverage
+            SEE THE RESOURCES TYPES that are in your subscription and eligible for protection 
+            by Azure defender 
+
+        -Security Alerts 
+            Describe DETAILS OF THE AFFECTED RESOURCES, suggested REMEDIATION steps, 
+            and in some cases an option to trigger a logic app in response
+
+        -Insights 
+            ROLLING PANE OF NEWS, suggested reading, and HIGH PRIORITY ALERTS 
+            gives Security Center's insights into pressing security matters 
+            that are relevant to you and your subscription 
+
+        -Advanced Protection 
+            Additional Security featuress that is driven by analytics
+
+                -Vm Vulnerability 
+                -Just-in-time VM access 
+                -Adaptive application control 
+                -container image scanning 
+                -Adaptive network hardening 
+                -SQL vulnerability assessment 
+                -File integrity monitoring 
+                -Network map 
+                -IoT Security
+
+            =MANY PLANS for specific Azure Resources:
+                -Azure Defender for:
+                    -Servers
+                    -App service 
+                    -Storage 
+                    -SQL 
+                    -Kubernetes 
+                    -Container Registries 
+                    -Key Vault 
+                    -Resource Manager 
+                    -DNS 
+                    -Open-Source relational databases 
+
+                =WHEN YOU TURN ON AZURE DEFENDER ALL PLANS ARE ACTIVATED=
+
+            =Network map=
+                -Provides a graphical view with security overlays giving you 
+                recommendations and insights for hardening your network resources 
+
+            =Can see:
+                -network topology of Azure workloads
+                -Connections between your virtual machines and subnets 
+                -Capability to drill down from the map into specific resources 
+                -Recommendations for those resources 
+
+            =Hybrid Cloud Protection=
+                Can protect virtual machines residing in other cloud service providers
+                (Amazon Web Services AWS ,Google Cloud Platform GCP) via azure arc
+
+                -Azure Arc 
+                    CONTROL PLANE that can manage COMPUTE RESOURCES accross cloud service providers, 
+                    On-premise and at the edge
+
+==Multi-factor Authentication (MFA)==
+    -Security control where after you fill in your username/email and password 
+    YOU HAVE TO USE A SECOND DEVICE such as a phone to confimrm that its you logging in 
+
+    -MFA protects against people who have stolen your PASSWORD 
+    (Option in most CSP and social media websites such as Facebook)
+    
+
+==Azure Security Center==
+    -UNIFIED INFRASTRUCTURE SECURITY MANAGEMENT SYSTEM 
+        Strengthens the security posture of your data centers, and 
+        provides advances threat protection across your hybrid workloads in the cloud 
+
+
+==Key Vault==
+    Azure Key Vault helps you SAFEGUARD CRYPTOGRAPHIC KEYS AND OTHER SECRETS 
+    used by cloud apps and services 
+
+    -Secrets Management:
+        Stores and tightly control access to TOKENS, PASSWORDS, CERTIFICATES, API KEYS, OTHER SECRETS 
+
+    -Key management:
+        Create and control the ENCRYPTION KEYS used to encrypt your data 
+
+    -Certificate management:
+        Provision, manage, and deploy public and private SSL CERTIFICATES for use with 
+        Azure and internal connected resources 
+
+    -Hardware Security Module (Piece of hardware designed to store ENCRYPTION KEYS):
+        Secrets and Keys can be protected either by software or FIPS 140 LEVEL 2 validated HSMs
+
+        =FIPS (Federal information Processing Standard) 140-2 =
+            US and Canadian government standard that specifies the security requirements 
+            for cryptographic modules that protect sensitive information 
+
+        HSM's that are MULTI-TENANT are FIPS 140-2 COMPLIANT 
+        (multiple customers virtually isolated on an HSM)
+
+        HSM's that are SINGLE-TENANT are FIPS 140-3 COMPLIANT 
+        (single customer on a dedicated HSM)
+
+==Azure DDoS Protection==
+    -DDoS 
+        Malicious attempt to disrupt normal traffic by flooding a website with large AMOUNTS
+        OF FAKE TRAFFIC
+
+    =Most frequent DDoS attacks=
+        -Volumetric attacks 
+            Volume-based attacks that flood the network with legitimate looking traffic 
+            Exhausts available bandwidth 
+            Legitimate uses cannot acess website 
+            Measured in Bits Per Second (bps)
+
+        -Protocol attacks 
+            exhausting server resources with false protocol requests that exploit weaknesses
+                -UDP and TCP flooding on Layer 3 and 4
+            Measured in packages per second (PPS)
+        
+        -Application layer attacks
+            Attacks that occurs at the application layer (Layer 7)
+            HTTP floods, SQL injections, cross-site scripting(XSS) , parameter tampering , Sowloris attacks
+            Web application Firewalls (WAFs) are used as means of protection
+
+    =2 Tiers of DDoS protection=
+        -Basic 
+            -Free 
+            -Already turned on protect Azure's global network 
+    
+        -Standard 
+            -$2,994/month 
+            -Metrics, Alerts, Reporting 
+            -DDoS Expert Support 
+            -Application and Cost protection SLAs
+
+==Azure Firewall==
+    -Managed, CLOUD BASED NETWORK SECURITY SERVICE that protects your AZURE VNets resources 
+        
+        Fully stateful Firewall As A Service (FWaaS) with:
+            -built=in high availability 
+            -unrestricted cloud scalability
+
+    -Centrally CREATE, ENFORCE, and LOG application and network connectivity policies 
+    accross subscriptions and virtual networks
+
+    -Azure firewall uses STATIC PUBLIC IP ADDRESS for your VNet 
+    resources allowing outside firewalls to identify traffic originating from your virtual network.
+    (Service fully integrated with AZURE MONITOR for logging and analytics)
+
+
+    -You launch on Azure Firewall in its on VNet 
+    -Other VNets pass through this Central VNet 
+    -You get MICROSOFT THREAT INTELLIGENCE 
+        Blocks know malicious IPs and FQDNs 
+
+
+==Application Gateway==
+    APPLICATION LEVEL-ROUTING and LOAD BALANCING service 
+    (Operates on OSI layer 7 -> Application Layer)
+
+    -Application Gateway UNDERSTAND HOW TO WORK WITH HTTP/S requests
+    -Advanced routing rules based on the contents of a request
+
+    -AZURE WEB APPLICATION FIREWALL (WAF) policies can be attached to an 
+    APPLICATION GATEWAY to provide additional security 
+
+    Configure:
+        FRONTENDS -> ROUTING RULES -> BACKEND POOLS     
+
+    =Frontends=
+        -Private IP will create an Internal Load Balancer 
+        -Public IP will create a Public/External Load Balancer 
+
+    =Backends=
+        -Backend Pools 
+            Collection of resources to which your application Gateway can send traffic
+        
+        =Can contain:
+            -Virtual machines 
+            -Virtual machines Scale sets 
+            -IP addresses 
+            -IP domain names 
+            -App service
+
+    =Routing Rules=
+        -Listeners
+            List to incoming traffic and passes it to rules 
+
+        -Rules 
+            Say who should we pass data to 
+
+        HTTP/S settings 
+            say how we should handle HTTP requests
+
+
+==Routing rules==   
+    =Listener=
+        "Listens" specified port and IP address for traffic that uses a specified protocol 
+        (If criteria are met, the application gateway will apply this routing rule)
+
+        =2 types of listeners=
+            1.Basic 
+                Forward all requests for any domain to backend pools 
+            2.Multi-site 
+                Forward requests to different backend pools based on HOST READER and HOST NAME 
+
+        -Requests are matched according to ORDER OF RULES and type of listener 
+            -Add basic listeners last otherwise it will capture all requests-
+
+    =Backend Targets=
+        Chooses where a route should go either BACKEND POOL or REDIRECTION 
+
+    =HTTP SETTINGS=
+        To create a rule for backend Pool you need to create HTTP setting 
+        Allows to define how we want to handle cookies, connection draining, port request time out and more
+
+    =Backend Port=
+        Port where the backend servers listen to incoming traffic
+
+    =Cookie based affinity=
+        Use cookies to keep user session on the same server
+
+    =Connection draining=
+        Gracefully remove backend pool members during planned services updates 
+
+    =Request Timeouts=
+        Number of seconds that the application gateway will wait to receive a response 
+        from the backend pools before it returns a "connection timed out" error message
+
+    =Override backend path=
+        Override the path in the URL so that the requests for a specific path 
+        can be routed to another path
+
+    =Override Hostname 
+        Multi-tentant services like App service or API management rely on 
+        a specific host header or SNI extension to resolve to the correct endpoint.
+        (Change this settings to overwrite the incoming HTTP host header)
+
+
+==Role-Based Access Control (RBAC)==
+    Helps you MANAGE WHO HAS ACCESS TO AZURE RESOURCES, what they can do with those resources
+    and what areas they have access to
+
+    =Role assignment=
+        The way you control access to resources 
+        
+        =3 elements=
+            1.Security Principal 
+                Identity requesting access to an Azure resource such as:
+
+                    -User
+                        Individual who has a profile in Azure Active Directory 
+
+                    -Group
+                        Set of users created in Azure Active Directory 
+
+                    -Service Principal
+                        Security identity used by applications or services to access specific Azure resources
+                    
+                    -Managed Identity 
+                        Identity in Azure Active Directory that is automatically managed by Azure
+
+            2.Role definition
+                Collection of permissions
+                =OPERATIONS=
+                    -Read
+                    -Write
+                    -Delete 
+                    
+                    Roles can be high-level like OWNER 
+                    Roles can be specific like VIRTUAL MACHINE READER 
+
+                =Azure has BUILT-IN ROLES(4 fundamental built-in roles)
+                    -Owner
+                    -Contributor 
+                    -Reader 
+                    -User Access Administrator
+                
+                and you can define CUSTOM ROLES= 
+
+            3.Scope
+                Set of resources that access for the Role assignment applies to.
+                Scope Access Controls at the MANAGEMENT, SUBSCRIPTION or RESOURCE GROUP LEVEL.
+
+
+        =4 FUNDAMENTAL AZURE ROLES= (Azure RBAC includes over 70 built-in roles)
+
+==Management Groups==
+    Managing multiple subscriptions (accounts) into a hierarchal structure
+
+    -Each directory is given a single top-level management group called ROOT management group 
+
+    -All subscriptions within a management group automatically inherit the conditions applied 
+    to the management group
+
+
+==Service Health==
+    Information about CURRENT AND UPCOMING ISSUES such as:
+        -Service impacting events 
+        -Planned maintenance 
+        -Other changes that may affect your availability
+
+    -Azure Status:
+        Informs you of service outages in Azure 
+
+    -Azure service health 
+        A personalized view of the health of the Azure services and regions you're using 
+
+    -Azure resource health 
+        Information about the health of individual cloud resources (like VMs)
+
+==Azure Advisor==
+    -Personalized cloud consultant that helps you follow 
+    best practices to optimize Azure deployments 
+
+    -Dashboard displays personalized recommendations for all your subscriptions for the 5 categories:
+        1. High availability 
+        2. Security 
+        3. Performance
+        4. Cost 
+        5. Operational Excellence
+
+
+12.Technology Overview
+
+==Database Services==
+    -Azure Cosmos DB
+        Fully managed NoSQL DATABASES. 
+        Designed for scale with guarantee of 99.999% availability
+    
+    -Azure SQL Database
+        FULLY MANAGED MS SQL DATABASE with auto-scale, integral intelligence , and robust security 
+
+    -Azure Database for MySql /PSQL/ MariaDB 
+        Fully managed and scalable MySQL / PostgreSQL/MariaDB database 
+        with high availability and security 
+
+    -SQL Server on VMs 
+        Host enterprise SQL Server Apps in the cloud.
+        Lift-and-shift MS SQL servers from on-premise to Azure cloud
+
+    -Azure Synapse Analytics (Azure SQL data warehouse)
+        Fully managed DATA WAREHOUSE with integral security at every level of
+        scale at no extra cost 
+
+    -Azure Database Migration Service 
+        Migrates your databases to the cloud with no application code changes 
+
+    -Azure Cache for Redis 
+        CACHES frequently used and static data to reduce data and application latency 
+
+    -*Azure Table Storage 
+        WIDE COLUMN NOSQL DATABASE 
+        A NoSql database store that hosts unstructured data 
+        independent of any schema 
+
+
+==Application Integration Services==
+
+    -Azure Notifications Hub 
+        PUB/SUB Send notifications to any platform from any back end 
+
+    -Azure API apps 
+        API GATEWAY Quickly build and consume APIs in the cloud.
+        Route APIs to Azure Service 
+
+    -Azure Service Bus 
+        SERVICE BUS Reliable cloud messaging as a service (MaaS)
+        and siple hybrid integration 
+
+    -Azure Stream Analytics 
+        Serverless REAL TIME ANALYTICS, from the cloud to the edge 
+
+    -Azure Logic Apps 
+        Schedule, automate and orchestrate tasks, businesses processes 
+        and workflows 
+
+    -Azure API management 
+        Hybrid, multi-cloud management platform for APIs across all environments.
+        Put in-front of existing APIs to add additional functionality 
+    
+    -*Azure Queue Storage 
+        MESSAGING QUEUE 
+        A data store for queuing and reliably delivering messages 
+        between applications
+
+
+=Developer and Mobile Tools=
+
+    -Azure SignalR Service 
+        REAL TIME MESSAGING 
+        Easily add real-time web functionality to applications 
+        (Think of it like the Pusher of Azure)
+
+    -Azure App Service 
+        Easy to use service for deploying and scaling web-applications 
+        with .NET, NODE.JS, JAVA, PYTHON, and PHP
+        Developer focus on building their web-apps, and not worrying 
+        about the underlying infrastructure 
+        (Think of it like HEROKU for Azure)
+
+    -Visual Studio (Microsoft-owned)
+        CODE EDITOR 
+        Integrated development environment (IDE) designed for 
+        creating powerful, scalable applications for Azure 
+        
+    -Xamarin (Microsoft-owned)
+        MOBILE-APP FRAMEWORK 
+        Create powerful and scalable native mobile apps with .NET and Azure 
+
+
+==Azure DevOps Services==
+
+    -Azure DevOps 
+        Plan smarter, collaborate,and ship faster with a set of 
+        modern dev Services
+
+        -Azure Boards 
+            KANBAN
+            Deliver value to your users faster using proven agile tools
+            to plan, track, and discuss work across your teams 
+
+        -Azure Pipelines 
+            Build, test, and deploy with CI/CD that works with any language 
+            ,platform, and cloud. 
+            
+            Connect to Github or any other Git provider and deploy continuosly 
+
+        -Azure Repos 
+            Get unlimited, cloud-hosted private Git repos and collaborate 
+            to build better code with pull requests 
+            and advanced file management 
+
+        -Azure test plans 
+            Test and ship with confidence using MANUAL AND EXPLOTARY TESTING TOOLS 
+
+        -Azure Artifacts 
+            Create, host, and share packages with your team, and add 
+            artifacts to CI/CD pipelines with a single click 
+
+        -Azure DevTest Labs 
+            Fast, easy and lean-dev test environments 
+
+==Cloud-Native Networking Services==
+
+    -Azure DNS 
+        Provides ultra-fast DNS responses and ultra-high domain availability 
+
+    -Azure Virtual Network(vNET)
+        Logical isolated section of the Azure Network for customers to launch 
+        Azure resources within 
+
+    -Azure Load Balancer 
+        Osi Lever 4 (Transport) Load Balancer 
+
+    -Azure Application Gateway
+        OSI Level 7(HTTP) Load Balancer, can apply a Web application firewall
+
+    -Network security groups
+        Virtual firewall at the subnet level
+
+==Enterprise/ Hybrid Networking Services==
+    
+    -Azure Front Door 
+        Scalable and secure point for fast delivery of your global
+        applications 
+    
+    -Azure Express route 
+        Connection between On-premise to Azure Cloud from 50 Mbps to 10 Gbps 
+
+    -Virtual WAN 
+        Networking service that brings many networking, security, and 
+        routing functionalities together to provide a single operational 
+        interface 
+
+    -Azure Connection 
+        VPN connections securely connects two Azure local network via (IPsec)
+
+    -Virtual Network Gateway 
+        A site-to-site VPN connection between an Azure virtual network 
+        and your local network
+
+==Azure traffic manager==
+    Operatese at the DNS LAYER to quickly and efficient direct incoming 
+    DNS requests based on the ROUTING METHOD OF YOUR CHOICE 
+
+    -Route traffic to servers the geographically near by to reduce latency 
+    -Fail-over to redundant systems in-case primary systems become unhealthy 
+    -Route to random VM to simulate A/B testing 
+
+
+==IoT Services==
+    =IoT=
+        Network of internet connected objects (Usually hardware) 
+        able to collect and exchange data 
+
+        -Smart Bulbs 
+        -Smart fridges
+        -Smart Light Switches 
+        -Narrowband vs Wideband hardware 
+        -Security Cameras 
+        -Voice Command Speakers 
+        -Temperature, Pressure or Humidity Sensors
+        -Drones
+        -Phones 
+        -Buttons 
+
+    =Services=
+
+        -IoT Central 
+            Connects your IoT devices to the cloud 
+
+        -IoT Hub 
+            Enable highly secure and reliable communication between 
+            IoT application and the devices it manage 
+
+        -IoT Edge 
+            Fully managed service built on Azure IoT Hub.
+            Allows data processing and analysis nearest the IoT devices.
+            
+            =Edge computing=
+                When you offload compute from the cloud to local computing 
+                hardware such as IoT devices, phones or home computers 
+
+        -Windows 10 IoT Core Services 
+            Cloud services subscription that provides essential SERVICES 
+            needed to commercialize a device on Windows 10 IoT Core.
+
+            Long term OS support and services to manage device updates 
+            and asess device health 
+
+
+==Big data and Analytics Services==
+    =Big data= 
+        used to describe MASSIVE VOLUMES OF STRUCTURED/UNSTRUCTURED DATA 
+        that is so large it is difficult to MOVE AND PROCESS using 
+        traditional database and software techniques 
+
+    -Azure Synapse Analytics (SQL Data Warehouse)
+        Enterprise DATA WAREHOUSING AND BIG DATA ANALYTICS 
+        Intended to run Sql queries against large databases for Things 
+        such as REPORTING 
+    
+    -HDinsight 
+        Run OPEN SOURCE ANALYTICS SOFTWARE such as Hadoop, Kafka and Spark 
+
+    -Azure Databricks
+        Apache Spark-based analytics platform optimmized for the Microsoft
+        Azure Cloud services platform 
+
+        Third-Party Databricks cloud services supported within Azure 
+    
+    -Data Lake Analytics 
+        On-demand analytics job service that simplifies big data 
+        
+        ==Data lake==
+            Storage repository that holds vast amount of raw DATA in
+            its native format until it is needed 
+
+==AI/ML services introduction==
+    =AI=
+        Machines that perform jobs that mimic human behavior 
+
+    =Machine Learning=
+        Machines that get better at a task without explicit programming
+        (learn by their own)
+
+    =Deep learning=
+        Machines that have artifical neural network inspired by the 
+        human brain to solve complex problems
+
+    =Services=
+
+        -Azure Machine Learning Service 
+            Service that simplifies running AI/ML related workloads allowing 
+            you to build flexible Pipelines to automate workflow.
+            Use python and R, Run DL workloads such as Tensorflow
+
+        -Azure Machine Learning Studio (CLASSIC)
+            Older service that manages AI/ML workloads .Does not have Pipeline
+            and other limitations.
+
+            Workloads are not easily transferable to from classic to new service 
+
+
+        
+==AI/ML services==
+
+    -Personalizer 
+        Deliver rich , personalised experiences for every user 
+
+    -Translator 
+        Add real time, multi language text translation to your apps, website and tools 
+
+    -Anomaly detector 
+        Detect anomalies in data to quickly identify and troubleshoot issues 
+
+    -Azure Bot service 
+        Intelligent, serverless bot service that scales on demand 
+
+    -Form recogniser 
+        Automate the extraction of text, key/value pairs and tables from your documents 
+
+    -Computer vision 
+        Easily customise computer vision models for your unique use case 
+
+    -Language understanding 
+        Build natural language understanding into apps, bots and IoT devices 
+
+    -QnA Maker 
+        Create conversional question-and-answer bot from existing content 
+
+    -Text analytics 
+        Extract information such as sentiment, key phrases, named entitities and 
+        language from your text 
+    
+    -Content moderator 
+        Moderate text and images to provide safer, more positive user experience 
+
+    -Face 
+        Detect and identify people and emotions in images 
+
+    -Ink recogniser 
+        Recognise digital ink content, such as handwriting, shapes and document layout 
+
+
+==Serverless Services==
+    =Serverless=
+        Underlying servers, infrastructure and OS is taken care of by the 
+        CLOUD SERVICE PROVIDER (CSP)
+
+        It will generally be highly available, scalable and cost-effective
+
+    -Event driven scale 
+        Serverless function can be triggered or trigger other events allowing 
+        you to compose complex applications and its just scales
+
+    -Abstraction of Servers 
+        Servers are abstracted away. Code is described as functions.
+        These functions can be running on different compute instances 
+
+    -Micro-Billing 
+        Serverless compute could run for a fraction of a second 
+        Billing intro micro-seconds will save you money
+
+    =Services=
+
+        -Azure functions 
+            Run small amounts of code known as serverless functions in favorite language:
+                -C#
+                -Java 
+                -JavaScript
+                -Python  
+                -PowerShell 
+
+        -Blob storage 
+            Serverless Object Storage. Just upload files 
+            don't think about the underlying file systems, resizing
+
+
+        -Logic apps 
+            Build serverless workflows composed of Azure functions 
+            Building a state machines for serverless compute 
+
+        -Event grid 
+            Uses Pub/Sub messaging system to allow you react to events and 
+            trigger other Azure Cloud Services such as Azure Functions 
+
+
+13.Billing and Pricing 
+
+==Service Level Agreement==
+    -Describes Azure's commitments for UPTIME and CONNECTIVITY
+        Uptime and Connectivity is described as PERFORMANCE TARGETS
+        Performance Target is represented as a PERCENTAGE(%)
+            -99% (two nines)
+            -99.9% (Three nines)
+            =99.999 (Five nines)
+
+    SLA's are individualized per Azure Service 
+
+    -AZURE DOES NOT PROVIDE SLAs for FREE TIER OR THE SHARED TIERS-
+
+
+==Service Credits==
+    -Customers may HAVE DISCOUNT APPLIED TO THEIR AZURE BILL,
+    as COMPENSATION FOR UNDER-PERFORMING AZURE PRODUCT OR SERVICE 
+    based on the SLA
+
+
+==Composite SLAs==
+    -When you COMBINE SLAs accross different service offerings
+    =Different Service have different SLAs=
+
+    FALLBACK SYSTEMS WILL IMPROVE OVERALL SLA
+        Imagine Sql database was down but you had a queue 
+        Saving transactions attempts from Web App to Queue to write to DB
+
+==TCO (Total Cost Ownership) calculator==
+    -ESTIMATE COST SAVINGS you can realize by migrating your workloads to Azure 
+
+    Generate out a detailed report and export as a PDF to send to decision makers 
+    (Use: azure.microsoft.com/pricing/calculator)
+    
+
+==Azure Marketplace==
+    -APPS AND SERVICES made available by THIRD-PARTY PUBLISHERS to 
+    quickly get started.
+
+    Available apps can be Free, Free-Trial, Pay-as-you-go, Bring-Your-Own-License (BYOL)
+
+
+==Azure Hybrid Benefit==
+    Many customers have invested in WINDOWS SERVER LICENSES 
+    and would like to REPURPOSE THIS INVESTMENT on Azure 
+
+    =Azure Hybrid Use Benefit (HUB)=
+        Gives customers the right to use these licenses for virtual machines on Azure 
+            -Windows Severs 
+            -SQL Servers 
+            
+                -HUB can be turned on and off at anytime for existing VMs
+                -HUB can be applied at deployment time for new VMs 
+                    (Bring Your Own License (BYOL))
+
+==Subscriptions (Azure Account)==
+    -There are 4 tiers of Azure Subscriptions-
+
+        1.Free subscription 
+            -Credita Card Required 
+            -$200 USD credits free for 30 days 
+            -Certain Azure products free for 12 months 
+
+
+        2.Pay-as-You-Go (PAYG) Subscription
+            -Credit Card required 
+            -Charged at the end of the month based on consumed cloud resources 
+
+
+        3.Enterprise Agreement 
+            -Enterprise and Azure agree on receive discounted price 
+            for licenses and cloud services 
+
+        
+        4.Student Subscription 
+            -No Credit Card required 
+            -$100 USD Credits for 12 months
+            -Requires valid student Email 
+
+
+==Azure Pricing calculator==
+    CONFIGURE AND ESTIMATE COSTS FOR AZURE PRODUCTS.(No Sign-in require)
+    Download EXCEL SPREADSHEET and share with your boss 
+    (Use: azure.microsoft.com/pricing/calculator)
+
+
+==Azure Cost management==
+    -Perform COST ANALYSIS, visualize the spending of your Azure Cloud resources
+    -Create BUDGETS, set a budget threshold be alerted when approaching or exceeded 
+
+    
+==Resource Tags==
+    -KEY AND VALUE PAIR that you can assign to azure resources
+    
+    Allow you to organize your resources in following ways:
+        -Resource management 
+            Specific workloads, environments 
+            (DEVELOPER ENVIRONMENTS)
+
+        -Cost management and optimization 
+            -Cost tracking, Budgets, ALERTS
+
+        -Operations Management 
+            Business commitments and SLA operations 
+            (Mission-Critical Services)
+
+        -Security 
+            Classification of data and security impact 
+
+        -Governance and Regulatory compliance 
+        -Automation 
+        -Workload optimization
+
+
+
+    =Tag Example=
+        -Dept = Finance 
+        -Status = Approved 
+        -Team = Compliance
+        -Environment = Production 
+        -Project = Enterprise 
+        -Location = West US
+
+
+14.Governance And Compliance 
+==Microsoft Purview Information Protection==
+        MICROSOFT PURVIEW INFORMATION PROTECTION (MPIP) 
+            collection of features within Microsoft Purview (Microsoft 365 Compoliance)
+            to help you discover, classify, and protect sensitive information 
+            wherever it lives or travels
+
+
+    =MPIP CAPABILITIES=
+        =Know your Data=
+            Understand your DATA LANDSCAPE 
+            and identify important data accross hybrid environment
+        
+            =Sensitive Information Types=
+                Identifies sensitive data by using BUILT-IN CUSTOM REGULAR 
+                EXPRESSIONS or a function
+
+                Corroborative evidence includes Keywords, confidence levels and proximity 
+                    -Built-in sensitive labels 
+
+            =Trainable Classifiers=
+                IDENTIFIES SENSITIVE DATA by using examples of the data you're interested 
+                in rather than identifying elements in the item (PATTERN MATCHING)
+                (You can use built-in classifiers or train a classifier with own content)
+                    -Trainable Classifiers 
+
+            =Data classification=
+                GRAPHICAL IDENTIFICATION OF ITEMS in your organization that have 
+                a sensitivity label, retention label, or have been classified 
+                You can also use this information to gain insights into the actions that your users 
+                are taking on these items 
+                    -Content explorer 
+                    -Activity explorer
+
+        
+        =Protect your Data=
+            Apply FLEXIBLE PROTECTION actions that include encryption,
+            acess restrictions, and visual markings
+                -Sensitivity labels 
+                -Azure information Protection Unified Labeling client 
+                -Double Key encryption
+                -Office 365 Message Encryption (OME)
+                -Service encryption with Customer Key 
+                -Sharepoint information Rights Management (IRM)
+                -Rights Management Connector 
+                -Azure information Protection Unified Labeling scanner 
+                -Microsoft Defender for Cloud Apps 
+                -Microsoft Information Protection SDK
+
+        =Prevent data loss=
+            Prevent ACCIDENTAL OVERSHARING of sensitive information 
+                -Microsoft Purview Data Loss Prevention (DLP)   
+                -Endpoint Data Loss Prevention
+                -Microsoft Compliance Extension -Chrome Extension 
+                -Microsoft Purview Data loss prevention on-premises scanner 
+                -Protect sensitive information in Microsoft Teams Chat and Channel Messages 
+
+
+        =Govern your Data=
+            MICROSOFT PURVIEW DATA LIFECYCLE MANAGEMENT (Microsoft Information Governance)
+            Collection of features to GOVERN YOUR DATA FOR COMPLIANCE or Regulatory
+
+            - MICROSOFT PURVIEW DATA LIFECYCLE MANAGEMENT -
+                Keep what you need and delete what you don't 
+                    -Retention policies and labels 
+                    -Inactive Mailboxes
+                    -Archive Mailboxes 
+                    -Import service for PST files 
+            
+            - MICROSOFT PURVIEW RECORDS MANAGEMENT -
+                Manage high-value items for business, legal, or regulatory 
+                record-keeping requirements 
+                    -File plan 
+                    -Retention Labels for individual items, retention
+                    policies if needed for baseline retention 
+                    -Dispostion review and proof of dispostion 
+
+==Introduction to Azure Policies==
+     -Enforce organizational standards and to assess COMPLIANCE at-scale 
+     Polices DO NOT RESTRICT access , they only observe for compliance 
+
+        ==AZURE HAS IN-BUILT POLICIES YOU CAN USE RIGHT AWAY=
+
+     =POLICY DEFINITIONS=
+        Is a JSON FILE used to describe business rules to control 
+        access to resources 
+    
+    =POLICY ASSIGMENT=
+        Scope of a policy can effect.Assigned to a user,
+        a resource group or management group 
+
+    =POLICY PARAMETERS=
+        Values you can pass into your policy definition so your 
+        polices are more flexible for re-use 
+
+    =INITIATIVE DEFINITIONS=
+        Collection of policy definitions, that you can assign.
+        (Group of policies to enforce PCI-DSS COMPLIANCE)
+
+==Resource Locks==
+    As an admin, you may need to LOCK A SUBSCRIPTION, RESOURCE GROUP, OR 
+    RESOURCE TO PREVENT OTHERS USERS TO ACCIDENTALLY DELETING OR MODIFYING 
+    CRITICAL RESOURCES 
+
+    =In the Azure Portal you can set following lock levels:
+
+        -CanNotDelete (DELETE):
+            authorized users can still read and modify a resource,but they 
+            can't delete the resource 
+        
+        -ReadOnly (Read-Only):
+            authorized users can read a resource, but they can't delete 
+            or update the resource 
+
+
+==Azure Blueprints==
+    -Enable QUICK CREATION of GOVERNED SUBSCRIPTIONS
+
+    -Compose artifacts based on common or organization-based patterns
+    into re-usable blueprints
+    
+    -Service is designed to help with environment setup-
+
+    Blueprints are a declarative way to orchestrate the deployment 
+    of various resource templates and other artifacts such as:
+        -Role assignments 
+        -Policy assignments
+        -Azure Resource Manager Templates (ARM templates)
+        -Resource groups 
+        
+    The Azure blueprints service is backed by the globally distributed 
+    AZURE COSMOS DB
+    (Blueprint objects are replicated to multiple Azure regions)
+
+
+    =ARM templates vs Azure Blueprints 
+        NEARLY everything you want to include for deployment in Azure Blueprints 
+        can be accomplished with an ARM template 
+
+        =ARM TEMPLATE=
+            -Stored locally or in source control 
+            -NO active connection or relationship to the ARM template 
+
+        =AZURE BLUEPRINTS=
+            -Relationship between the BLUEPRINT DEFINITION(what should be deployed)
+            and BLUEPRINT ASSIGNMENT (what was deployed)
+
+            -Can also upgrade several subscriptions at once that are governed by the 
+            same blueprint
+
+    =AZURE BLUEPRINTS SUPPORTS IMPROVED TRACKING AND AUDITING OF DEPLOYMENTS=   
+
+15.Azure Management Tools 
+
+==Azure Portal==
+    -WEB-BASED, UNIFIED CONSOLE that provides an alternative 
+    to command-line tools.(Browser to use Azure)
+
+    -Manage your subscription 
+
+    -BUILD, MANAGE AND MONITOR everything from simple web apps 
+    to complex cloud deployments 
+
+    =Azure Preview Portal=
+        You can utilize new features that are in:
+            -Preview
+            -Beta 
+            -Other pre-release
+
+        -TEST PREVIEW FEATURES -> preview.portal.azure.com 
+        -STABLE-RELEASE AND PRODUCTION-READY FEATURES -> portal.azure.com
+
+==Cloud Shell==
+    -Interactive, authenticated, BROWSER-ACCESIBLE SHELL for managing 
+    Azure resources 
+
+    Provides flexibility of choosing the shell experience that 
+    best suits the way you work (Bash or PowerShell)
+
+
+==PowerShell==
+    -Task automation and configuration management framework.
+    COMMAND-LINE SHELL and a SCRIPTING-LANGUAGE
+
+    POWERSHELL is built on top of the .NET Common Language Runtime (CLR)
+    ,and then accepts and returns .NET objects
+
+
+==Azure CLI==
+    -CLI:
+        Command Line Inteface(CLI)
+            PROCESSES COMMANDS TO A COMPUTER PROGRAM IN THE FORM OF 
+            LINES OF TEXT.
+
+            Operating systems implement a command-line inteface 
+            in a shell or terminal 
+
+    -The AZURE CLI can be installed on Windows, Mac and Linux.
+    (Once installed you can type 'az' followed by other commands to 
+    CREATE, UPDATE, DELETE, VIEW and MANAGE Azure resources)
+
+==Visual Studio Code==
+    -FREE SOURCE CODE EDITOR made by Microsoft for Windows, Linux and macOS
+
+
+==Introduction to Azure Resource Manager(ARM)==   
+    -Service that allows you to MANAGE Azure resources 
+
+    -Collection of services in the Azure Portal, SO YOU CAN'T SIMPLY TYPE
+    in "Azure Resource Manager"
+
+    =Management layer that allows to:
+        -Create, Update, Delete resources 
+        -Apply management features (Access controls, Locks, tags)
+        -Writing infrastructure as Code (IaC) via JSON templates 
+
+        =Features that make up the ARM LAYER=
+            -Subscriptions 
+            -Management Groups 
+            -Resource Groups 
+            -Resource Providers 
+            -Resource Locks 
+            -Azure Blueprints 
+            -Resource Tags 
+            -Access Controls (IAM)
+            -Role Based Acess Control (RBAC)
+            -Azure policies 
+            -ARM templates 
+
+==ARM (use cases)==
+    -Think of ARM as a GATEKEEPER 
+        (All REQUESTS flow through ARM and it decides whether that 
+        request can be performed on a RESOURCE)
+
+
+==Azure Resource Manager(scope)==   
+    =Scope=
+        BOUNDARY OF CONTROL for Azure resources.
+        Way to GOVERN your resource by placing resources
+            -Withing a local grouping 
+            -Applying logical restrictions in the form of rules 
+
+    =Scopes=
+        -Management Groups
+            Logical grouping of multiple subscriptions 
+
+            -Subscriptions 
+                Grants access to Azure services based on billing and 
+                support agreement 
+
+                -Resource group
+                    Logical grouping of multiple resources 
+
+                    -Resources 
+                        An Azure service (eg.Azure VMs)
+        
+
+==Introduction to ARM templates==
+    =Infrastructure AS Code(IaC)=
+        -Process of MANAGING AND PROVISIONING computer data centers(Azure)
+        through machine-readable DEFINITION FILES(Json Files) rather than 
+        physical hardware configuration or interactive configuration tools 
+
+    (Write script that will setup cloud services for you)
+
+    IaCs can be:
+        -Declarative:
+            Defined exactly what you want, and you get exactly that 
+
+        -Imperative:
+            Defined what you generally want, and the 
+            service will guess what you want 
+
+    =ARM Templates=
+        -JSON FILE THAT DEFINE AZURE RESOURCES you want to provision and 
+        Azure services you want to configure
+
+            -ARM Templates are declarative (You get exactly what you define)
+
+            -Stand up, tear down or share entire architectures in minutes 
+
+            -Reduce configuration mistakes 
+
+            -Know exactly what you have defined for a stack to establish
+            an architecture baseline for compliance 
+
+            -MODULARITY -> Break up your architecture in multiple files
+            and reuse them 
+
+            -EXTENSIBILIY -> Add PowerShell and Bash scripts to your templates 
+
+            -TESTING -> Use the ARM template tool kit (arm-ttk)
+
+            -PREVIEW CHANGES -> Before you create infrastructure via 
+            template, see what it will create 
+
+            -BUILT-IN VALIDATION -> Will only deploy your template if it passes 
+
+            -TRACKED DEPLOYMENTS -> Keep track of changes to architecture over time 
+
+            -POLICY AS CODE -> Apply Azure policies to ensure you remain compliant 
+
+            -MICROSOFT BLUEPRINTS -> Establishes relationship between resource and 
+            template 
+
+            -CI/CD Integration (Continuous Integration/Continous Deploy)
+
+            -EXPORTABLE CODE -> Exporting current state of a resource groups 
+            and resource 
+
+            -Authoring tools -> Visual Studio Code has advanced features 
+            for authoring ARM templates
+
+
+16. Monitoring Tools 
+
+==Introduction to Azure Monitor==
+    -Comprehensive solution FOR COLLECTING, ANALYZING, AND ACTING 
+    ON TELEMETRY from your cloud and on-premises environments 
+
+    -Create visual Dashboards 
+    -Smart alerts 
+    -Automated Actions 
+    -Log monitoring 
+    (Many Azure services by default are already sending telemetry data to 
+    Azure Monitor)
+
+
+==Pillars of Observability==
+    =Observability=
+        -ability to measure and understand how internal systems
+        work in order to answer questions regarding performance, 
+        tolerance, security, and faults with a system/application 
+
+        -To gain observability you need:
+
+            -Metrics 
+                -Number that is measured over period of time 
+                (If we measured the CPU usage and aggerated it over 
+                an a period of time we could have an AVERAGE CPU METRIC)
+
+            -Logs
+                -Text file where each line contains event data about what 
+                happened at a certain time
+
+            -Traces
+                -History of requests that travels through multiple 
+                APPS / SERVICES  so we can pinpoint performance or failure
+
+
+==Anatomy of Azure Monitor==
+    -SOURCES OF COMMON MONITORING DATA to populate datastores  
+    (Order by (Highest to Lowest))
+
+    -The FUNCTIONS that Azure monitor can perform 
+
+    -The two fundamental data stores are METRICS and LOGS
+    
+
+    =INSIGHTS=
+        -application 
+        -Containers 
+        -VMs 
+        -Monitoring solutions 
+
+    =Visualize=
+        -Dashboards 
+        -Views 
+        -PowerBI
+        -Workbooks 
+
+    =Analyze= 
+        -Metric Analytics 
+        -Log Analytics 
+
+    =Respond 
+        -Alerts 
+        -Autoscale 
+
+    =Integrate=
+        -Logic apps 
+        -Export APIs 
+
+
+==Log analytics==
+    -Tool in the Azure Portal used TO EDIT AND RUN LOG QUERIES 
+    with data in Azure Monitor Logs 
+    (Uses query language called KQL)
+
+
+==Log analytics Workspaces==
+    =Workspace=
+        -Unique environment for Azure Monitor Log data 
+
+    -Has its own repository and configuration
+    -Data sources and solutions are configured to store their data in 
+    a particular WORKSPACE
+
+
+==Azure Alerts==
+    -Notify when issues are found with your infrastructure or application 
+    (Allow to IDENTIFY and ADDRESS issues before the users of your 
+    system notice them)
+
+    =3 Kinds of alerts:
+        -Metric alerts 
+        -Log alerts 
+        -Activity Log alerts
+
+    (When an alerts is triggered you can be notified and have it take action)
+
+
+    =Alert rule=
+        -defines who should we monitor and when should we react 
+
+    =Target Resource=
+        -A resource such as VM is designated as the TARGET RESOURCE 
+        and it omits a SIGNAL 
+
+    =Signal=
+        -Data payload emmited from the resource that could be:
+            -Metric 
+            -Log 
+            -Activity Log 
+            -Application Insights 
+
+
+    =Criteria/logic test=
+        -Signal is evaluated against a CRITERIA OR LOGICAL TEST to determine 
+        if the alerts has been triggered (Percentage CPU > 70%)
+
+
+    =Action group=
+        -Contains actions to be that will performed when alert is triggered 
+
+    =Actions=
+        (Automation runbook, Azure Function, ITSM, Logic App, Webhooks or Secure Webhooks)
+
+    =Monitor condition=
+        (Current state of your alert)
+        - Set by the system 
+
+    =Alert State= 
+        -Set by the user
+
+==Application insights==
+    -APPLICATION PERFORMANCE MANAGEMENT (APM) service 
+    (It is a sub-service of Azure Monitor)
+
+
+    =APM= 
+        -Monitoring and management of PERFORMANCE AND AVAILABILITY 
+        of software apps.
+
+        -Detect and diagnose complex application performance problems to 
+        maintaing an expected level of service 
+
+        =Why use them?=
+            -Automatically detect performance anomalies 
+
+            -Includes powerful analytics tools that help diagnose 
+            issues and to understand what users do with your app
+
+            -designed to help you continuosly improve performance 
+            and usability 
+
+            -works for apps on a for .NET, Node.js, Java, and Python hosted 
+            On-premises ,hybrid, or any public cloud 
+
+            -Integrated with DEVOPS process 
+
+            -Monitor and analyze telemetry from mobile apps by integrating 
+            with Visual Studio App Center 
+
+        
+    -To use application insights YOU NEED TO INSTRUMENT YOUR APPLICATION 
+        -Install instrument package (SDK)
+        
+        -Enable application insights using the Application insights 
+        Agents when supported 
+
+        -Apps can be instrumented from anywhere 
+
+        -When you set up Application insights monitoring for your 
+        web app, you create an Application insights resource in 
+        Microsoft Azure 
+
+        -You open this resource in the Azure portal in order to see 
+        and analyze the telemetry collected from your app
+
+
+    =Ways to VIEW telemetry data=
+        -Alers 
+        -Power BI 
+        -Visual Studio 
+        -Rest API 
+        -Continuous Export 
+
+
+    =What does it monitor=
+        -Request rates, response times, and failure rates 
+        -Dependency rates, response times, and failure rates 
+        -Exceptions 
+        -Page views and load performance 
+        -AJAX calls 
+        -User and session counts 
+        -Performance counters 
+        -Host diagnostics 
+        -Diagnostic trace logs 
+        -Custom events and metrics 
+
+
+    =Where to see the telemetry=
+        -Smart detection and manual alerts 
+        -Application map 
+        -Profiler 
+        -Usage Analytics 
+        -Diagnostic search from instance data 
+        -Metrics Explorer for aggerated data 
+        -Dashboards
+        -Live Metrics Stream 
+        -Analytics 
+        -Visual Studio 
+        -Snapshot debugger 
+        -Power BI 
+        -Rest API
+        -Continuous Export 

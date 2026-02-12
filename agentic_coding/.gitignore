@@ -1,0 +1,9 @@
+.env
+__pycache__/
+.DS_Store
+
+# the .env file
+.env
+
+# ignore the azure text
+azure_prep/Azure.txt

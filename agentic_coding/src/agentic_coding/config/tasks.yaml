@@ -1,0 +1,34 @@
+interpret_the_code:
+  description: >
+    Scan the code in a JUPYTER NOTEBOOK and provide the steps to recreate the same code but for TRANSLATION INTO PYTHON CODE.
+  expected_output: >
+    The explanation of what needs to be added or deleted to adjust to python code along with the code in each step: 
+    {jupyter_code}
+  agent: interpreter
+
+
+python_logic_code:
+  description: >
+    Review the context you got and expand each topic into a full section for a report.
+    Make sure the report is detailed and contains any and all relevant information.
+  expected_output: >
+    The code in markdown file with comments and self explanatory so the frontend developer knows which are the variables, 
+    and can integrate in an easier way the GRADIO CODE. 
+    AVOID ADDING '''python (triple comma and the word python)  
+    IN THE BEGINNING AND '''(Triple comma at the end)
+  agent: backend_developer
+  context:
+      - interpret_the_code
+
+gradio_code:
+  description: >
+    Review the code given by the backend developer, and add your GRADIO UI code.
+    Provide also the best practices when integrating backend and frontend.
+  expected_output: >
+    A well done python code file with the extension ".py".
+    AVOID ADDING '''python (triple comma and the word python)  
+    IN THE BEGINNING AND '''(Triple comma at the end), 
+    IF SEEN ERASE THAT BEFORE GIVING THE FILE
+  agent: frontend_developer
+  context:
+      - python_logic_code
