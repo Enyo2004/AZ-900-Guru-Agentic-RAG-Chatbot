@@ -63,42 +63,13 @@ load_vector_db = Chroma(
 # Retriever (top‑k = 10)
 retriever = load_vector_db.as_retriever(search_type="similarity", search_kwargs={"k": 10})
 
-# Quick retrieval test
-answer = retriever.invoke("Provide the Storage Services that Azure has")
-content_answer = "".join([content.page_content for content in answer])
-
-print("Retrieved context sample:")
-print(content_answer[:500])
-
 # Initialise Cerebras LLM
 llm = ChatOpenAI(
-    model="gpt-oss-120b",
-    base_url=os.getenv("CEREBRAS_URL"),
-    api_key=os.getenv("CEREBRAS_API_KEY"),
+    model="openai/gpt-oss-120b",
+    base_url=os.getenv("GROQ_URL"),
+    api_key=os.getenv("GROQ_API_KEY"),
+    max_completion_tokens=3000
 )
-
-# (optional) Initialise Mistral LLM – not used in UI
-llm_mistral = ChatOpenAI(
-    model="devstral-2512",
-    base_url=os.getenv("MISTRAL_URL"),
-    api_key=os.getenv("MISTRAL_API_KEY"),
-)
-
-# Optional token count for retrieved context
-import tiktoken
-encoding = tiktoken.get_encoding("cl100k_base")
-tokens = encoding.encode(content_answer)
-print("Tokens in retrieved context:", len(tokens))
-
-# Demo message template
-messages = [
-    SystemMessage(
-        "You are a professional Azure teacher, and you provide good explanations for the user's questions."
-        " You provide good and understandable explanations to prepare a student for the Azure 900 fundamentals exam."
-        " You base your answers from this information retrieved:"
-    ),
-    HumanMessage("hello world"),
-]
 
 # Gradio chatbot callback
 def rag_chatbot(user_message: str, history: list):
@@ -115,13 +86,13 @@ def rag_chatbot(user_message: str, history: list):
     # Build messages for LLM
     messages = [
         SystemMessage(
-            "You are a professional Azure teacher, and you provide good explanations for the user's questions."
-            " You provide good and understandable explanations to prepare a student for the Azure 900 fundamentals exam."
-            " You base your answers from this information retrieved:\n{context}".format(context=context)
-        ),
-        HumanMessage(user_message),
-    ] + history
-
+            "You are a professional Azure teacher, and you provide good but CONCISE explanations for the user's questions. "
+            f"You base your answers from this information retrieved:\n{context}"
+        )
+    ] + history + [
+        HumanMessage(content=user_message)
+    ]
+    
     final_response = ""
     for chunk in llm.stream(messages):
         if chunk.content is not None:
